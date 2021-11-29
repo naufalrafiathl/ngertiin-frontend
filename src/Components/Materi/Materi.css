@@ -1,0 +1,38 @@
+.container-materi {
+    padding-top: 4rem;
+    text-align: center;
+    color: #396EB0;
+}
+
+.card-container {
+    padding: 7rem;
+    height: 300px;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.materi-card {
+    background-color: #FC997C;
+    color: white;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.materi-card h1 {
+    font-size: 1.5rem;
+    height: 50px;
+}
+
+.descMateri {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #396EB0;
+    height: 70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+}

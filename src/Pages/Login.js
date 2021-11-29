@@ -17,8 +17,9 @@ function Login() {
                     <input type="text" /><br/>
                     <label>Password</label><br/>
                     <input type="password" />
-                    <button>Login</button>
+                    
                 </form>
+                <a href="/materi"><button>Login</button></a>
             </div>
         </div>
     )

@@ -1,0 +1,23 @@
+
+
+.container-user {
+    padding: 7rem;
+    height: 300px;
+    padding-top: 7rem;
+}
+
+.container-user h1 {
+    text-align: center;
+    color: #396EB0;
+}
+
+.container-user
+
+.user-card {
+    padding: 3rem;
+    background-color: #FC997C;
+    color: white;
+    width: 500px;
+    height: 150px;
+    border-radius: 10px;
+}

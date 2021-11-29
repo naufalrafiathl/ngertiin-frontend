@@ -5,10 +5,9 @@ import './css/Home.css'
 
 function Home() {
     return (
-        <div className="container-home">
+        <div >
             <Navbar isLogin={false} isRegistered={true}></Navbar>
-            <div className="container-login">
-            </div>
+            
             <div className="container-home">
             <div className="running">
                         <Typewriter

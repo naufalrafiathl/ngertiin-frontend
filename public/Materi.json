@@ -1,0 +1,21 @@
+[{
+    "judulMateri": "Matematika Saintek",
+    "id": 1,
+    "category": "Saintek",
+    "respons": "Lorem ipsum dolor sit amet, consectetur "
+  }, {
+    "judulMateri": "Fisika",
+    "id": 2,
+    "category": "Saintek",
+    "respons": "Lorem ipsum dolor sit amet, consectetur "
+  }, {
+    "judulMateri": "Biologi",
+    "id": 2,
+    "category": "Saintek",
+    "respons": "Lorem ipsum dolor sit amet, consectetur "
+  }, {
+    "judulMateri": "Kimia",
+    "id": 2,
+    "category": "Saintek",
+    "respons": "Lorem ipsum dolor sit amet, consectetur "
+  }]
