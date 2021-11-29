@@ -1,0 +1,263 @@
+.navbars {
+    width: 100%;
+    height: 90px;
+    flex-grow: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+
+}
+
+
+.ctrNav {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+.topnav {
+  display: none;
+}
+
+.adm-nav {
+  display: block;
+}
+
+.ngertiin a {
+  width: auto;
+}
+
+.ngertiin {
+    padding-top: 27px;
+    padding-left: 15px;
+    width:70px;
+    height: 48px;
+    flex-grow: 0;
+    margin: 0 181px 0 0;
+    font-family: Harabara;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #396EB0;
+  }
+  
+  .ngertiin .style1 {
+    color: #222222;
+  }
+  .navbar-container {
+    display: flex;
+    height: 80px;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    padding-top: 50px;
+  }
+  
+  .nav-menu {
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    opacity: 1;
+    z-index: 1;
+  }
+  .nav-menu.active {
+    background: #ffffff;
+    position: fixed;
+    left: 0;
+    opacity: 10;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .menu-icon {
+    color:#222222;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    transform: translate(-20%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .adm-nav a {
+    font-family: Poppins;
+    margin-top: 0;
+    float: right;
+    display: block;
+    color: #666666;
+    text-align: center;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  
+
+  @media only screen and (min-width: 908px) {
+    .ngertiin {
+
+      padding-left: 64px;
+
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .navbar-container {
+      justify-content: space-between;
+    }
+    .topnav {
+      display:block;
+      padding: 25px;
+      padding-top: 20px;
+      padding-right: 30px;
+      overflow: hidden;
+      color: black;
+      font-size: 24px;
+      font-family: Poppins;
+    }
+
+    .login-home {
+        display:block;
+        padding: 25px;
+        padding-top: 30px;
+        padding-right: 50px;
+        overflow: hidden;
+        color: black;
+        font-size: 24px;
+        font-family: Poppins;
+      }
+
+     .login-home button {
+         padding:0.5rem;
+        color:white;
+        border: none;
+        border-radius: 10px;
+         background-color: #FC997C;
+         width: 100px;
+     } 
+
+     .login-home button:hover {
+       cursor: pointer;
+    } 
+
+    .adm-nav {
+      display:block;
+      padding: 25px;
+      padding-top: 20px;
+      overflow: hidden;
+      color: black;
+      font-size: 24px;
+      font-family: Poppins;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #666666;
+      text-align: center;
+      padding: 14px 40px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .adm-nav a {
+      float: left;
+      display: block;
+      color: #666666;
+      text-align: center;
+      padding: 14px 40px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    /* Add an active class to highlight the current page */
+    .active {
+      color: white;
+    }
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+    
+    /* Dropdown container - needed to position the dropdown content */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    /* Style the dropdown button to fit inside the topnav */
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: #666666;
+      padding: 14px 40px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    /* Style the dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      z-index: 1;
+    }
+    
+    /* Style the links inside the dropdown */
+    .dropdown-content a {
+      float: none;
+      color:#666666;
+      padding: 12px 16px;
+      padding-top: 20px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    /* Add a dark background on topnav links and the dropdown button on hover */
+    
+    /* Add a grey background to dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #fff;
+      color: black;
+    }
+    
+    /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+  
+    
+  }
+
+  

@@ -1,0 +1,33 @@
+.running {
+    color:#396EB0;
+    height: 250px;
+    font-size: 7rem;
+    padding: 5rem;
+    text-align: center;
+}
+
+.options-home {
+    width:100%;
+    padding: 7rem;
+    padding-top: 0rem;
+}
+
+.getStarted {
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    background-color:#FC997C ;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.getStarted:hover{
+    cursor: pointer;
+}
+
+.vertical-center {
+    width: 412px;
+    margin: auto;
+  }
+
