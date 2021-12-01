@@ -22,7 +22,7 @@ function PostComp(props) {
     return (
         <div className="container-forum">
             <h1>Forum</h1>
-            {post ? 
+            {post && post.child_post ? 
             <div className="forum-card-container">
                 <div className="post-card forum-content forum-content-left">
                     <div className="post-header">
@@ -39,7 +39,7 @@ function PostComp(props) {
                             <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
                         </div>
                         <div>
-                            <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post.length}</p>
+                            <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span> {post.child_post.length} </p>
                         </div>
                     </div>
                 </div>
