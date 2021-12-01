@@ -38,7 +38,7 @@ const PopUpTryOut = () => {
                                 Tidak
                                 </button>
                             </div>
-                            <a href="/sukses"><button>Ya</button></a>
+                            <a href="/sukses-submit-tryOut"><button>Ya</button></a>
                         </div>
                     </div>
                 </div>
