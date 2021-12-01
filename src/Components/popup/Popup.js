@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import './TryOut.css'
 
-const PopUpTryOut = () => {
+function Popup() {
     const [popup, setPopup] = useState(false);
     const toggleModal = () => {
         setPopup(!popup)
@@ -18,7 +17,7 @@ const PopUpTryOut = () => {
             <div className="button-card">
                 <button 
                 onClick={toggleModal}>
-                Selesai
+                
                 </button>
             </div>
             {popup && (
@@ -26,19 +25,19 @@ const PopUpTryOut = () => {
                 <div 
                 className="overlay">
                     <div className="popup-content">
-                        <h2>Apakah anda Yakin?</h2>
+                        <h2>Generate raport?</h2>
                         <p>
-                        Dengan menekan tombol Ya, anda akan menyelesaikan Try Out ini.
+                        Dengan menekan tombol Lihat, anda akan melihat raport.
                         </p>
                         <div className="button-card">
                             <div className="kembali"> 
                                 <button 
                                 onClick={toggleModal}
                                 style={{background: "gray"}}>
-                                Tidak
+                                Batal
                                 </button>
                             </div>
-                            <a href="/sukses-submit-tryOut"><button>Ya</button></a>
+                            <a href="/sukses"><button>Lihat</button></a>
                         </div>
                     </div>
                 </div>
@@ -49,4 +48,4 @@ const PopUpTryOut = () => {
     )
 }
 
-export default PopUpTryOut
+export default Popup
