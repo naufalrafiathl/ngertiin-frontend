@@ -246,4 +246,5 @@ textarea { resize: horizontal; max-width: 300px; min-width: 200px; }
     width: 100px;
     color: white;
     border-radius: 10px;
+    align-items: center;
 }

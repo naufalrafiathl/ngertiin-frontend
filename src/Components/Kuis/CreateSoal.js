@@ -1,7 +1,8 @@
 import {React, Component} from 'react'
 import './Kuis.css'
+import { Icon } from '@iconify/react';
 
-class TEEST extends Component{
+class CreateSoal extends Component{
     constructor(){
         super()
         this.state = {
@@ -10,6 +11,7 @@ class TEEST extends Component{
             index : '',
             popup : false,
             delete: false,
+            empty : false,
         }
     }
 
@@ -22,11 +24,18 @@ class TEEST extends Component{
 
     toggleDeleteModal = ()=>{
         this.setState({
-            delete : !this.state.delete
+            delete : !this.state.delete,
         })
         
     }
 
+    toggleBuatModal = ()=>{
+        this.setState({
+            empty : !this.state.empty,
+            popup : !this.state.popup
+        })
+        
+    }
 
     handleSubmit=(e)=>{
         e.preventDefault();
@@ -38,33 +47,40 @@ class TEEST extends Component{
         let D = this.refs.txtD.value;
         let jawaban_benar = this.refs.txtJawabanBenar.value;
 
-        if(this.state.act === 0){
-            let newSoal = {
-                "pertanyaan" : pertanyaan,
-                "jawaban" : {
-                    "A" : A,
-                    "B" : B,
-                    "C" : C,
-                    "D" : D
-                },
-                "jawaban_benar" : jawaban_benar,
-            }
-            soalData.push(newSoal);
+        if(pertanyaan==='' || A==='' || B==='' || C===''|| D===''|| jawaban_benar===''){
+            this.setState({
+                empty : !this.state.empty
+            })
         }else{
-            let index = this.state.index;
-            soalData[index].pertanyaan = pertanyaan;
-            soalData[index].jawaban.A = A;
-            soalData[index].jawaban.B = B;
-            soalData[index].jawaban.C = C;
-            soalData[index].jawaban.D = D;
-            soalData[index].jawaban_benar = jawaban_benar;
+            if(this.state.act === 0){
+                let newSoal = {
+                    "pertanyaan" : pertanyaan,
+                    "jawaban" : {
+                        "A" : A,
+                        "B" : B,
+                        "C" : C,
+                        "D" : D
+                    },
+                    "jawaban_benar" : jawaban_benar,
+                }
+                soalData.push(newSoal);
+            }else{
+                let index = this.state.index;
+                soalData[index].pertanyaan = pertanyaan;
+                soalData[index].jawaban.A = A;
+                soalData[index].jawaban.B = B;
+                soalData[index].jawaban.C = C;
+                soalData[index].jawaban.D = D;
+                soalData[index].jawaban_benar = jawaban_benar;
+            }
+            this.setState({
+                soalData : soalData,
+                act :0,
+                popup : !this.state.popup
+            })
         }
 
-        this.setState({
-            soalData : soalData,
-            act :0,
-            popup : !this.state.popup
-        })
+
     }
 
     handleEdit = (i) => {
@@ -93,9 +109,13 @@ class TEEST extends Component{
 
     }
 
-
     render(){
         let soalData = this.state.soalData;
+        if(this.state.popup){
+            document.body.classList.add('active-modal')
+        } else {
+            document.body.classList.remove('active-modal')
+        }
         return(
             <div className="create-soal-baru">
                 <div className="button-card">
@@ -110,56 +130,79 @@ class TEEST extends Component{
             <div className="popup">
                 <div className="overlay">
                     <div className="popup-content">
-                        
-                    <div class="form-buatsoal">
-                        <form>
-                            <div className="title-card">
-                                <h2>Detail Soal</h2>        
-                                <label>Soal</label>
-                                <div className="pertanyaan">
-                                    <textarea 
-                                    ref="txtPertanyaan" 
-                                    placeholder="Isi Pertanyaan"/><br/>
+                        <div class="form-buatsoal">
+                            <form>
+                                <div className="title-card">
+                                    <h2>Detail Soal</h2>        
+                                    <label>Soal</label>
+                                    <div className="pertanyaan">
+                                        <textarea 
+                                        ref="txtPertanyaan" 
+                                        placeholder="Isi Pertanyaan"/><br/>
+                                    </div>
+                                    <label>Opsi<br/></label>
+                                    <div className="opsi">
+                                        <textarea ref="txtA" placeholder="Opsi A"/><br/>
+                                        <textarea ref="txtB" placeholder="Opsi B"/><br/>
+                                        <textarea ref="txtC" placeholder="Opsi C"/><br/>
+                                        <textarea ref="txtD" placeholder="Opsi D"/><br/>
+                                    </div>
+                                    <label>Jawaban Benar</label>
+                                    <div className="jawaban_benar">
+                                        <select ref="txtJawabanBenar"> 
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                        </select>
+                                    </div>
+                                    <br/>
                                 </div>
-                                <label>Opsi<br/></label>
-                                <div className="opsi">
-                                    <textarea ref="txtA" placeholder="Opsi A"/><br/>
-                                    <textarea ref="txtB" placeholder="Opsi B"/><br/>
-                                    <textarea ref="txtC" placeholder="Opsi C"/><br/>
-                                    <textarea ref="txtD" placeholder="Opsi D"/><br/>
-                                </div>
-                                <label>Jawaban Benar</label>
-                                <div className="jawaban_benar">
-                                    <select ref="txtJawabanBenar"> 
-                                        <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="C">C</option>
-                                        <option value="D">D</option>
-                                    </select>
-                                </div>
-                                <br/>
+                            </form>
                             </div>
-
-                        </form>
-                    </div>
-                        <div className="popo">
-                            <div className="button-card">
-                                <div className="kembali"> 
+                            <div className="popo">
+                                <div className="button-card">
+                                    <div className="kembali"> 
+                                        <button 
+                                        onClick={() => this.toggleModal()}
+                                        style={{background: "gray"}}>
+                                        Batal
+                                        </button>
+                                    </div>
                                     <button 
-                                    onClick={() => this.toggleModal()}
-                                    style={{background: "gray"}}>
-                                    Batal
+                                        onClick={e => this.handleSubmit(e)}
+                                        >Simpan
                                     </button>
                                 </div>
-                                <button 
-                                    onClick={e => this.handleSubmit(e)}
-                                    >Simpan
-                                </button>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div> 
+            )}
+
+            {this.state.empty && (
+                <div className="popup">
+                    <div className="overlay">
+                        <div className="popup-content">
+                            <h2>Pembuatan Soal Batal</h2>
+                            <Icon icon="gridicons:cross-circle" color="#dc3545" height="100" />
+                            <p>
+                            Harap isi detail soal yang diminta secara lengkap
+                            </p>
+                            <div className="popo">
+                                <div className="button-card">
+                                    <div className="kembali" style={{margin: "auto"}}> 
+                                        <button 
+                                        onClick={() => this.toggleBuatModal()}
+                                        style={{background: "gray"}}>
+                                        Ok
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             )}
 
             {
@@ -223,7 +266,10 @@ class TEEST extends Component{
                             <div className="popup">
                                 <div className="overlay">
                                     <div className="popup-content">
-                                        halo
+                                        <h2>Apakah anda Yakin?</h2>
+                                        <p>
+                                        Dengan menekan tombol Hapus, anda akan menghapus soal ini.
+                                        </p>
                                         <div className="popo">
                                             <div className="button-card">
                                                 <div className="kembali"> 
@@ -242,7 +288,7 @@ class TEEST extends Component{
                                     </div>
                                 </div>
                             </div> 
-                            )}
+                        )}
                     </div>
                 </div>
             </div> 
@@ -255,4 +301,4 @@ class TEEST extends Component{
     }
 }
 
-export default TEEST
+export default CreateSoal
