@@ -59,16 +59,19 @@ function ForumComp(props) {
                     <div className="post-card">
                         <div className="post-header">
                             <h2><a className="post-link" href="/details-post">{post.topik}</a></h2>
+                            <a href="/create-post"><button>
+                                <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply
+                            </button></a>
                             <a href="/update-post">
                                 <button>
                                 <span class="iconify-inline" data-icon="dashicons:edit"></span>
-                                    Ubah Post
+                                    Update
                                 </button>
                             </a>
                             <a href="/delete-post">
                                 <button>
                                 <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
-                                    Hapus Post
+                                    Hapus
                                 </button>
                             </a>
                         </div>
@@ -90,7 +93,6 @@ function ForumComp(props) {
                 )):"" }
                 </div>
             </div>
-            
         </div>
     )
 }

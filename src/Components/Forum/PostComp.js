@@ -39,7 +39,7 @@ function PostComp(props) {
                             <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
                         </div>
                         <div>
-                            <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post}</p>
+                            <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post.length}</p>
                         </div>
                     </div>
                 </div>
@@ -47,17 +47,17 @@ function PostComp(props) {
                     <a href="/update-post">
                         <button>
                         <span class="iconify-inline" data-icon="dashicons:edit"></span>
-                            Ubah Post
+                            Update
                         </button>
                     </a>
                     <a href="/delete-post">
                         <button>
                         <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
-                            Hapus Post
+                            Hapus
                         </button>
                     </a>
                     <a href="/create-post"><button>
-                        <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply Post
+                        <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply
                     </button></a>
                     <a href="/forum"><button>
                         <span class="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
