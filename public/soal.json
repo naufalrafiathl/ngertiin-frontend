@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "pertanyaan": "Berikut ini adalah pernyataan mengenai metabolisme. \r\n(1) Membutuhkan H2O sebagai sumber elektron \r\n(2) Membutuhkan oksigen sebagai akseptor elektron \r\n(3) Membutuhkan NADPH sebagai sumber elektron \r\n(4) Menghasilkan ATP dan CO2 \r\n(5) Mebgubah energi cahaya menjadi energi kimia",
+        "jawaban": {
+            "A": "1 dan 3",
+            "B": "2 dan 3",
+            "C": "2 dan 4",
+            "D": "3 dan 5",
+            "E": "4 dan 5"
+        },
+        "jawaban_benar": "C",
+        "materi": 1
+    },
+    {
+        "id": 2,
+        "pertanyaan": "Tanaman tembakau yang disisipi gen kunang-kunang mampu melepaskan energi cahaya sehingga tampak bersinar. SEBAB Kunang-kunang (Photuris) menggunakan substrat berupa D-lusiferin untuk menghasilkan pendaran.",
+        "jawaban":{
+            "A": "Jika pernyataan benar, alasan benar, dan menunjukkan hubungan sebab akibat.",
+            "B": "Jika pernyataan benar, alasan benar, tetapi tidak menunjukkan hubungan sebab akibat.",
+            "C": "Jika pernyataan benar, alasan salah.",
+            "D": "Jika pernyataan salah, alasan benar.",
+            "E": "Jika pernyataan salah, alasan salah."
+        },
+        "jawaban_benar": "A",
+        "materi": 1
+    },
+    {
+        "id": 3,
+        "pertanyaan": "Berikut ini adalah pernyataan mengenai metabolisme. \r\n(1) Membutuhkan H2O sebagai sumber elektron \r\n(2) Membutuhkan oksigen sebagai akseptor elektron \r\n(3) Membutuhkan NADPH sebagai sumber elektron \r\n(4) Menghasilkan ATP dan CO2 \r\n(5) Mebgubah energi cahaya menjadi energi kimia",
+        "jawaban": {
+            "A": "1 dan 3",
+            "B": "2 dan 3",
+            "C": "2 dan 4",
+            "D": "3 dan 5",
+            "E": "4 dan 5"
+        },
+        "jawaban_benar": "C",
+        "materi": 1
+    },
+    {
+        "id": 4,
+        "pertanyaan": "Tanaman tembakau yang disisipi gen kunang-kunang mampu melepaskan energi cahaya sehingga tampak bersinar. SEBAB Kunang-kunang (Photuris) menggunakan substrat berupa D-lusiferin untuk menghasilkan pendaran.",
+        "jawaban":{
+            "A": "Jika pernyataan benar, alasan benar, dan menunjukkan hubungan sebab akibat.",
+            "B": "Jika pernyataan benar, alasan benar, tetapi tidak menunjukkan hubungan sebab akibat.",
+            "C": "Jika pernyataan benar, alasan salah.",
+            "D": "Jika pernyataan salah, alasan benar.",
+            "E": "Jika pernyataan salah, alasan salah."
+        },
+        "jawaban_benar": "A",
+        "materi": 1
+    },
+    {
+        "id": 5,
+        "pertanyaan": "Berikut ini adalah pernyataan mengenai metabolisme. \r\n(1) Membutuhkan H2O sebagai sumber elektron \r\n(2) Membutuhkan oksigen sebagai akseptor elektron \r\n(3) Membutuhkan NADPH sebagai sumber elektron \r\n(4) Menghasilkan ATP dan CO2 \r\n(5) Mebgubah energi cahaya menjadi energi kimia",
+        "jawaban": {
+            "A": "1 dan 3",
+            "B": "2 dan 3",
+            "C": "2 dan 4",
+            "D": "3 dan 5",
+            "E": "4 dan 5"
+        },
+        "jawaban_benar": "C",
+        "materi": 1
+    }
+]
