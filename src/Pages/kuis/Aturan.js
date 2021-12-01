@@ -20,7 +20,7 @@ function Aturan1() {
                         Jumlah pertanyaan: 5
                     </div>
                     <div className="content-card">
-                        <a href="/quiz-1"><button>Mengerjakan Kuis</button></a>
+                        <a href="/kuis"><button>Mengerjakan Kuis</button></a>
                     </div>
                 </div>
             </div>

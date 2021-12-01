@@ -37,7 +37,7 @@ function ListSoal() {
             
             {/* buat soal */}
             <div className="container-quiz-card">
-                <div className="kuis-card">
+                <div className="kuis-card" style={{height: "1000px"}}>
                     <div className="title-card">
                         <h1>Kuis Metabolisme</h1>
                     </div>

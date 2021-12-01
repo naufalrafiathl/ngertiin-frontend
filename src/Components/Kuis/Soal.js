@@ -15,7 +15,7 @@ const Soal = ({kuis}) => {
                         <input 
                             type="radio"
                             value = {kuis.jawaban.A}
-                            name="opsi"
+                            name={kuis.jawaban.A}
                         />
                         {kuis.jawaban.A}
                     </div>
@@ -23,7 +23,7 @@ const Soal = ({kuis}) => {
                         <input 
                             type="radio"
                             value = {kuis.jawaban.B}
-                            name="opsi"
+                            name={kuis.jawaban.B}
                         />
                         {kuis.jawaban.B}
                     </div>
@@ -31,7 +31,7 @@ const Soal = ({kuis}) => {
                         <input 
                             type="radio"
                             value = {kuis.jawaban.C}
-                            name="opsi"
+                            name={kuis.jawaban.C}
                         />
                         {kuis.jawaban.C}
                     </div>
@@ -39,7 +39,7 @@ const Soal = ({kuis}) => {
                         <input 
                             type="radio"
                             value = {kuis.jawaban.D}
-                            name="opsi"
+                            name={kuis.jawaban.D}
                         />
                         {kuis.jawaban.D}
                     </div>

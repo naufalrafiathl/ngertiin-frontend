@@ -10,6 +10,11 @@ import Logout from './Pages/Logout';
 import Kuis from './Pages/kuis/Kuis';
 import Aturan from './Pages/kuis/Aturan';
 import Sukses from './Pages/kuis/Sukses';
+import Forum from './Pages/forum/Forum';
+import CreatePost from './Pages/forum/CreatePost';
+import UpdatePost from './Pages/forum/UpdatePost';
+import DetailsPost from './Pages/forum/DetailsPost';
+import DeletePost from './Pages/forum/DeletePost';
 
 function App() {
   return (
@@ -25,6 +30,11 @@ function App() {
             <Route path="/kuis" element={<Kuis/>}/>
             <Route path="/sukses" element={<Sukses/>}/>
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/forum" element={<Forum/>}/>
+            <Route path="/create-post" element={<CreatePost/>}/>
+            <Route path="/update-post" element={<UpdatePost/>}/>
+            <Route path="/details-post" element={<DetailsPost/>}/>
+            <Route path="/delete-post" element={<DeletePost/>}/>
            </Routes>
         </Router>
     </div>

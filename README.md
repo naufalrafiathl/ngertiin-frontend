@@ -9,5 +9,9 @@
 - **Shafira Putri Novia Hartanti - 1906293316**
 
 
+<<<<<<< HEAD
 Site Deployed On : https://ngertiin.netlify.app/
+=======
+Site Deployed On : https://ngertiin.netlify.app/ </br>
+>>>>>>> bc0e3669497535fd32ea7d78c8d86460c1466495
 Backend : https://github.com/muhammadhafizmm/ngerti_in_backend

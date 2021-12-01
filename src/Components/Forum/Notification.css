@@ -1,0 +1,14 @@
+.notification {
+    margin: 1rem 5rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: #000;
+}
+
+.success-notification {
+    background-color: rgba(25, 135, 84, 0.4);
+}
+
+.error-notification {
+    background-color: rgba(220, 53, 69, 0.4);
+}

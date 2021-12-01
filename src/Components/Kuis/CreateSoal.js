@@ -1,15 +1,32 @@
 import {React, Component} from 'react'
 import './Kuis.css'
 
-class CreateSoal extends Component{
+class TEEST extends Component{
     constructor(){
         super()
         this.state = {
             soalData:[],
             act: 0,
-            index : ''
+            index : '',
+            popup : false,
+            delete: false,
         }
     }
+
+    toggleModal = ()=>{
+        this.setState({
+            popup : !this.state.popup,
+        })
+        
+    }
+
+    toggleDeleteModal = ()=>{
+        this.setState({
+            delete : !this.state.delete
+        })
+        
+    }
+
 
     handleSubmit=(e)=>{
         e.preventDefault();
@@ -45,7 +62,8 @@ class CreateSoal extends Component{
 
         this.setState({
             soalData : soalData,
-            act :0
+            act :0,
+            popup : !this.state.popup
         })
     }
 
@@ -69,94 +87,172 @@ class CreateSoal extends Component{
         let soalData = this.state.soalData;
         soalData.splice(i,1);
         this.setState({
-            soalData : soalData
+            soalData : soalData,
+            delete : !this.state.delete
         })
+
     }
 
 
     render(){
         let soalData = this.state.soalData;
         return(
-            <div>
-                <form ref="myForm">
-                <div className="title-card">        
-                    <label>Soal  </label><input type="text" ref="txtPertanyaan" placeholder="Isi Pertanyaan"/><br/>
-                    <label>A  </label><input type="text" ref="txtA" placeholder="Opsi A"/><br/>
-                    <label>B  </label><input type="text" ref="txtB" placeholder="Opsi B"/><br/>
-                    <label>C  </label><input type="text" ref="txtC" placeholder="Opsi C"/><br/>
-                    <label>D  </label><input type="text" ref="txtD" placeholder="Opsi D"/><br/>
-                    <label>Jawaban Benar  </label><input type="text" ref="txtJawabanBenar" placeholder="Isi Jawaban Benar"/><br/>
-                </div>
+            <div className="create-soal-baru">
                 <div className="button-card">
                     <div className="kembali">
                         <button 
-                        onClick={e => this.handleSubmit(e)}
-                        >Save</button>
+                        onClick={() => this.toggleModal()}>
+                        Buat Soal
+                        </button>
+                    </div>
+            </div>
+            {this.state.popup && (
+            <div className="popup">
+                <div className="overlay">
+                    <div className="popup-content">
+                        
+                    <div class="form-buatsoal">
+                        <form>
+                            <div className="title-card">
+                                <h2>Detail Soal</h2>        
+                                <label>Soal</label>
+                                <div className="pertanyaan">
+                                    <textarea 
+                                    ref="txtPertanyaan" 
+                                    placeholder="Isi Pertanyaan"/><br/>
+                                </div>
+                                <label>Opsi<br/></label>
+                                <div className="opsi">
+                                    <textarea ref="txtA" placeholder="Opsi A"/><br/>
+                                    <textarea ref="txtB" placeholder="Opsi B"/><br/>
+                                    <textarea ref="txtC" placeholder="Opsi C"/><br/>
+                                    <textarea ref="txtD" placeholder="Opsi D"/><br/>
+                                </div>
+                                <label>Jawaban Benar</label>
+                                <div className="jawaban_benar">
+                                    <select ref="txtJawabanBenar"> 
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                    </select>
+                                </div>
+                                <br/>
+                            </div>
+
+                        </form>
+                    </div>
+                        <div className="popo">
+                            <div className="button-card">
+                                <div className="kembali"> 
+                                    <button 
+                                    onClick={() => this.toggleModal()}
+                                    style={{background: "gray"}}>
+                                    Batal
+                                    </button>
+                                </div>
+                                <button 
+                                    onClick={e => this.handleSubmit(e)}
+                                    >Simpan
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </form>
-                {
-                soalData.map((data,i) =>
-                <div className="question-card" key ={i} style={{border: '1px solid #E8E8E8'}}>
-                    <div className="soal-card">
-                        <h3>Question</h3>
-                        <hr/>
-                        <p>{data.pertanyaan}</p>
-                        <div> 
-                            <input 
-                                type="radio"
-                                value = {data.jawaban.A}
-                                name="opsi"
-                            />
-                            {data.jawaban.A}
-                        </div>
-                        <div> 
-                            <input 
-                                type="radio"
-                                value = {data.jawaban.B}
-                                name="opsi"
-                            />
-                            {data.jawaban.B}
-                        </div>
-                        <div> 
-                            <input 
-                                type="radio"
-                                value = {data.jawaban.C}
-                                name="opsi"
-                            />
-                            {data.jawaban.C}
-                        </div>
-                        <div> 
-                            <input 
-                                type="radio"
-                                value = {data.jawaban.D}
-                                name="opsi"
-                            />
-                            {data.jawaban.D}
-                        </div>
-                        <p>Jawaban benar: {data.jawaban_benar}</p>
+            </div> 
+            )}
+
+            {
+            soalData.map((data,i) =>
+            <div className="question-card" key ={i} style={{border: '1px solid #E8E8E8'}}>
+                <div className="soal-card">
+                    <h3>Question</h3>
+                    <hr/>
+                    <p>{data.pertanyaan}</p>
+                    <div> 
+                        <input 
+                            type="radio"
+                            value = {data.jawaban.A}
+                            name="opsi"
+                        />
+                        {data.jawaban.A}
                     </div>
-                    <div className="create-soal">
-                        <div className="update">
-                            <button 
-                            onClick={() => this.handleEdit(i)}>
-                            Update
-                            </button>
-                        </div>
-                        <div className="cancel">
-                            <button 
-                            onClick={() => this.handleDelete(i)}>
-                            Delete
-                            </button>
-                        </div>
+                    <div> 
+                        <input 
+                            type="radio"
+                            value = {data.jawaban.B}
+                            name="opsi"
+                        />
+                        {data.jawaban.B}
                     </div>
-                </div> 
-                )}
-            </div>
+                    <div> 
+                        <input 
+                            type="radio"
+                            value = {data.jawaban.C}
+                            name="opsi"
+                        />
+                        {data.jawaban.C}
+                    </div>
+                    <div> 
+                        <input 
+                            type="radio"
+                            value = {data.jawaban.D}
+                            name="opsi"
+                        />
+                        {data.jawaban.D}
+                    </div>
+                    <p>Jawaban benar: {data.jawaban_benar}</p>
+                </div>
+                <div className="create-soal">
+                    <div className="update">
+                        <button 
+                            onClick={(i) => 
+                                this.toggleModal()
+                            }
+                        >
+                        Update Soal
+                        {/* onClick={() => this.handleEdit(i)} */}
+                        </button>
+                    </div>
+                    <div className="cancel">
+                        <button 
+                        onClick={() => this.toggleDeleteModal()}>
+                        Hapus Soal
+                        </button>
+                        {this.state.delete && (
+                            <div className="popup">
+                                <div className="overlay">
+                                    <div className="popup-content">
+                                        halo
+                                        <div className="popo">
+                                            <div className="button-card">
+                                                <div className="kembali"> 
+                                                    <button 
+                                                    onClick={() => this.toggleDeleteModal()}
+                                                    style={{background: "gray"}}>
+                                                    Batal
+                                                    </button>
+                                                </div>
+                                                <button 
+                                                    onClick={() => this.handleDelete(i)}
+                                                    >Hapus
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            )}
+                    </div>
+                </div>
+            </div> 
+            )}
+
+        </div>
 
 
         )
     }
 }
 
-export default CreateSoal
+export default TEEST
