@@ -1,9 +1,9 @@
 
 
 .container-user {
-    padding: 7rem;
+    padding: 0rem;
     height: 300px;
-    padding-top: 7rem;
+    padding-top: 4rem;
 }
 
 .container-user h1 {
@@ -11,13 +11,33 @@
     color: #396EB0;
 }
 
+.nama-card {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #396EB0;
+}
+
+.isPremium {
+    color: #FC997C;
+    font-weight: 800;
+}
 .container-user
 
 .user-card {
     padding: 3rem;
-    background-color: #FC997C;
+    padding-top: 2rem;
+    background-color: #FFFF;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
     color: white;
     width: 500px;
     height: 150px;
     border-radius: 10px;
+    text-align: center;
+    color: black ;
+}
+
+
+.user-card img {
+    width: 50px;
 }
