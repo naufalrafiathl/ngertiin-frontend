@@ -1,14 +1,16 @@
 import React from 'react'
 import './Navbar.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenuUnfold,AiOutlineMenu } from 'react-icons/ai'
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/modules/auth/thunks'
 
 function Navbar(props) {
 
-
+    const dispatch = useDispatch()
     const [click,setClick] = useState(false)
     const btnClick = () => setClick(!click)
-    const closeMobileMenu= () => setClick(false);
+    // const closeMobileMenu = () => setClick(false);
     console.log(props.isLogin)
 
     return (
@@ -17,10 +19,12 @@ function Navbar(props) {
                 <a className="direct-detail" href="/"><h4 className="ngertiin"><span className="style1">ngerti</span>In</h4></a>
                 
                 {props.isLogin ? 
-                <div class="topnav" id="myTopnav">
-                <a href="materi" >Materi</a>
-                <a href="profile">Profile</a>
-            </div>: props.isRegistered? 
+                <div className="topnav" id="myTopnav">
+                    <a href="materi" >Materi</a>
+                    <a href="profile">Profile</a>
+                    <a href="/" className="logout" onClick={() => dispatch(logout())}>Log-out</a>
+                </div>
+                : props.isRegistered? 
             <div className="login-home">
                 <a href="/login"><button>Login</button></a>
             </div>: <div className="login-home">
@@ -46,6 +50,11 @@ function Navbar(props) {
                 <a className="direct-detail" href="/profile">
                     <li className="nav-item">
                             Profile
+                    </li>
+                </a>
+                <a href="/" className="direct-detail"  onClick={() => dispatch(logout())}>
+                    <li className="nav-item">
+                            Log-out
                     </li>
                 </a>
             </ul>:""

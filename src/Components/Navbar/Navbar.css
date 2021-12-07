@@ -4,17 +4,16 @@
     flex-grow: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
-    position: fixed;
     z-index: 1;
 
 }
-
 
 .ctrNav {
   width: 100%;
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .topnav {

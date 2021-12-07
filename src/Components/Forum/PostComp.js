@@ -1,6 +1,6 @@
 import React from 'react'
 import './Post.css'
-import { useState,useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 function PostComp(props) {
     
@@ -33,34 +33,34 @@ function PostComp(props) {
                     </div>
                     <div className="post-footer">
                         <div>
-                            <p><span class="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
+                            <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
                         </div>
                         <div>
-                            <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
+                            <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
                         </div>
                         <div>
-                            <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post}</p>
+                            <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post}</p>
                         </div>
                     </div>
                 </div>
                 <div className="forum-aside">
                     <a href="/update-post">
                         <button>
-                        <span class="iconify-inline" data-icon="dashicons:edit"></span>
+                        <span className="iconify-inline" data-icon="dashicons:edit"></span>
                             Ubah Post
                         </button>
                     </a>
                     <a href="/delete-post">
                         <button>
-                        <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
+                        <span className="iconify-inline" data-icon="fluent:delete-24-filled"></span>
                             Hapus Post
                         </button>
                     </a>
                     <a href="/create-post"><button>
-                        <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply Post
+                        <span className="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply Post
                     </button></a>
                     <a href="/forum"><button>
-                        <span class="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
+                        <span className="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
                     </button></a>
                 </div>
             </div>

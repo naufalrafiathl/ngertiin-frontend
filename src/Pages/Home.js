@@ -1,13 +1,10 @@
 import React from 'react'
-import Navbar from '../Components/Navbar/Navbar'
 import Typewriter from 'typewriter-effect';
 import './css/Home.css'
 
 function Home() {
     return (
         <div >
-            <Navbar isLogin={false} isRegistered={true}></Navbar>
-            
             <div className="container-home">
             <div className="running">
                         <Typewriter
@@ -22,7 +19,7 @@ function Home() {
 
             <div className="container-learn-home">
                 <div className="options-home">
-                    <div class="vertical-center">
+                    <div className="vertical-center">
                     <a href="/register"><button className="getStarted">Daftar Sekarang</button></a>
                     </div>
                 </div>

@@ -1,20 +1,24 @@
 [{
     "judulMateri": "Matematika Saintek",
+    "url": "matematika-saintek",
     "id": 1,
     "category": "Saintek",
     "respons": "Lorem ipsum dolor sit amet, consectetur "
   }, {
     "judulMateri": "Fisika",
+    "url": "fisika",
     "id": 2,
     "category": "Saintek",
     "respons": "Lorem ipsum dolor sit amet, consectetur "
   }, {
     "judulMateri": "Biologi",
+    "url": "biologi",
     "id": 2,
     "category": "Saintek",
     "respons": "Lorem ipsum dolor sit amet, consectetur "
   }, {
     "judulMateri": "Kimia",
+    "url": "kimia",
     "id": 2,
     "category": "Saintek",
     "respons": "Lorem ipsum dolor sit amet, consectetur "

@@ -1,8 +1,8 @@
 import React from 'react'
 import './Forum.css'
 import { useState,useEffect } from 'react';
-import SuccessNotification from './SuccessNotification';
-import FailedNotification from './FailedNotification';
+// import SuccessNotification from './SuccessNotification';
+// import FailedNotification from './FailedNotification';
 
 function ForumComp(props) {
     
@@ -51,7 +51,7 @@ function ForumComp(props) {
             <div className="forum-card-container">
                 <div className="forum-aside">
                     <a href="/create-post"><button>
-                        <span class="iconify-inline" data-icon="akar-icons:circle-plus"></span>  Buat Post
+                        <span className="iconify-inline" data-icon="akar-icons:circle-plus"></span>  Buat Post
                     </button></a>
                 </div>
                 <div className="list-group forum-content forum-content-right">
@@ -61,13 +61,13 @@ function ForumComp(props) {
                             <h2><a className="post-link" href="/details-post">{post.topik}</a></h2>
                             <a href="/update-post">
                                 <button>
-                                <span class="iconify-inline" data-icon="dashicons:edit"></span>
+                                <span className="iconify-inline" data-icon="dashicons:edit"></span>
                                     Ubah Post
                                 </button>
                             </a>
                             <a href="/delete-post">
                                 <button>
-                                <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
+                                <span className="iconify-inline" data-icon="fluent:delete-24-filled"></span>
                                     Hapus Post
                                 </button>
                             </a>
@@ -77,13 +77,13 @@ function ForumComp(props) {
                         </div>
                         <div className="post-footer">
                             <div>
-                                <p><span class="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
+                                <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
                             </div>
                             <div>
-                                <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
+                                <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
                             </div>
                             <div>
-                                <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post.length}</p>
+                                <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post.length}</p>
                             </div>
                         </div>
                     </div>
