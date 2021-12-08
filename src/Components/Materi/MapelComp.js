@@ -7,16 +7,16 @@ const Style = styled.div`
     }
 `
 
-const MateriComp = ({materi_data}) => {
+const MapelComp = ({materi_data}) => {
     console.log("hello")
     return (
       <>
         <Style>
-            Materi
+            Mapel
         </Style>
       </>
     )
 }
 
-export default MateriComp
+export default MapelComp
 
