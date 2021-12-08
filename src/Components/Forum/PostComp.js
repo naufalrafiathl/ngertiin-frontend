@@ -1,6 +1,6 @@
 import React from 'react'
 import './Post.css'
-import { useState,useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 function PostComp(props) {
     
@@ -47,10 +47,10 @@ function PostComp(props) {
                     </div>
                     <div className="post-footer">
                         <div>
-                            <p><span class="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
+                            <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
                         </div>
                         <div>
-                            <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
+                            <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
                         </div>
                         <div>
                             <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span> {post.child_post.length} </p>
@@ -106,7 +106,7 @@ function PostComp(props) {
                         <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply
                     </button></a>
                     <a href="/forum"><button>
-                        <span class="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
+                        <span className="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
                     </button></a>
                 </div>
             </div>
