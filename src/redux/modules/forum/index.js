@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const forum = createSlice({
     name: "forum",
     initialState: {
-      mapel: undefined
+      posts: undefined
     },
     reducers: {
       setMapel(state, { payload }) {
-        state.mapel = payload;
+        state.posts = payload;
         return state;
       },
     },

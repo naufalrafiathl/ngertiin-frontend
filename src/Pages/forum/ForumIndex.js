@@ -1,21 +1,13 @@
 import React from 'react'
 import { useEffect } from 'react';
-import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { related_mapel } from '../../redux/modules/materi/thunks';
 import { Routes, Route, Outlet } from 'react-router';
 
-import Mapel from "./Mapel"
-import JurusanComp from "../../Components/Materi/JurusanComp"
-import ForumIndex from '../forum/ForumIndex';
+import Forum from "../forum/Forum"
+import CreatePost from '../forum/CreatePost';
 
-const Style = styled.div`
-    h2 {
-
-    }
-`
-
-const Materi = () => {
+const ForumIndex = ({mapel_data}) => {
     const dispatch = useDispatch()
     const { student } = useSelector((state) => state.auth)
     const { mapel } = useSelector((state) => state.materi)
@@ -31,20 +23,15 @@ const Materi = () => {
     return (
       <>
         <Routes>
-            <Route path="" element={<JurusanComp/>}></Route>
+            <Route path="" element={<Forum mapel_data={mapel_data}/>}></Route>
             {mapel &&  
               mapel.related_mapel.map((mapel_data, key) => {
                 return(
                   <>
-                    <Route 
-                      path={`/${mapel_data.mapel.split(" ").join("-").toLowerCase()}/*`}
-                      key={key}
-                      element={<Mapel mapel_data={mapel_data}/>}
-                    />
                     <Route
-                      path={`/${mapel_data.mapel.split(" ").join("-").toLowerCase()}/forum/*`}
+                      path={`/create-post/*`}
                       key={key}
-                      element={<ForumIndex mapel_data={mapel_data}/>}
+                      element={<CreatePost mapel_data={mapel_data}/>}
                     />
                   </> 
                 )}
@@ -55,5 +42,5 @@ const Materi = () => {
     )
 }
 
-export default Materi
+export default ForumIndex
 
