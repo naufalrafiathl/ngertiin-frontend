@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { related_mapel } from '../../redux/modules/materi/thunks';
+import { Link } from 'react-router-dom';
 
 const Style = styled.div`
 .container-mapel {
@@ -48,8 +49,7 @@ const Style = styled.div`
 const Jurusan = () => {
     const dispatch = useDispatch()
     const { student } = useSelector((state) => state.auth)
-    const { mapel } = useSelector((state) => state.materi)
-    console.log(student)
+    const { mapel } = useSelector((state) => state.jurusan)
 
     useEffect(() => {
       student && 
@@ -67,11 +67,11 @@ const Jurusan = () => {
                 <h2 className="materi-title">{mapel.jurusan_data.name}</h2>
                 <div className="card-container">
                   {mapel.related_mapel.map((mapel_data, key) => (
-                    <a href={`materi/${mapel_data.mapel.split(" ").join("-").toLowerCase()}`}>
+                    <Link to={`/materi/${mapel_data.mapel.split(" ").join("-").toLowerCase()}/`}>
                       <div className="mapel-card" key={key}>
                         <h1>{mapel_data.mapel}</h1>
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
