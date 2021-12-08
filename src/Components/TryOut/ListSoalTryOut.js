@@ -7,7 +7,7 @@ import './TryOut.css'
 function ListSoalTryOut() {
     const [tryout,setTryOut]=useState([]);
     useEffect(() => {
-        fetch('soal.json').then(response => {
+        fetch('to.json').then(response => {
             return response.json();
           }).then(data => {
             setTryOut(data)
@@ -26,15 +26,10 @@ function ListSoalTryOut() {
                     {tryout.map((tryout, index) => (
                         <SoalTryOut key = {index} tryout = {tryout}/>
                     ))}
-                    <div className="button-card">
-                        <div className="kembali">
-                            <a href="/aturan-tryOut"><button style={{background: "gray"}}>Kembali</button></a>
-                        </div>
                         <PopUpTryOut/>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
