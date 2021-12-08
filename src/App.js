@@ -43,10 +43,7 @@ const App = () => {
               <Route path="*" element={
                 loggedIn ? <App.LoggedIn/> : <App.LoggedOut />
               }/>
-              <Route path="/materi" element={<Materi/>}>
-                <Route path="*" element={<Materi/>}/>
-              </Route>
-              <Route path="/aturan" element={<Aturan/>}/>
+              {/* <Route path="/aturan" element={<Aturan/>}/>
               <Route path="/kuis" element={<Kuis/>}/>
               <Route path="/sukses" element={<Sukses/>}/>
               <Route path="/profile" element={<Profile/>}/>
@@ -61,7 +58,7 @@ const App = () => {
               <Route path="/delete-tryOut" element={<DeletePaket/>}/>
               <Route path="/aturan-tryOut" element={<AturanTryOut/>}/>
               <Route path="/sukses-submit-tryOut" element={<SuksesSubmitTryOut/>}/>
-              <Route path="/mengerjakan-tryOut" element={<MengerjakanTryOut/>}/>
+              <Route path="/mengerjakan-tryOut" element={<MengerjakanTryOut/>}/> */}
            </Routes>
       </Router>
     </div>
@@ -98,6 +95,7 @@ App.LoggedIn = () => (
       <Route path="/materi/*" element={<Materi/>}>
       </Route>
     </Routes>
+    <Outlet/>
   </>
 )
 
