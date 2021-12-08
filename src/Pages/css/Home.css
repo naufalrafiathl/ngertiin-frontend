@@ -8,7 +8,6 @@
 
 .options-home {
     width:100%;
-    padding: 7rem;
     padding-top: 0rem;
 }
 
@@ -41,13 +40,14 @@
     height: 200px;
     background-color: #396EB0;
     display: flex;
+    justify-content: space-around;
 }
 
 .header-left {
-    width: 35%;
+    width: 50%;
 }
 
 .header-right {
-    width: 65%;
+    width: 50%;
 }
 

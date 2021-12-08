@@ -6,6 +6,8 @@ const auth = createSlice({
     token: undefined,
     refreshToken: undefined,
     student: undefined,
+    pengajarID: undefined,
+    isPengajar:undefined,
     allUsers: undefined,
     errorMessage: "",
     successMessage: "",
@@ -30,6 +32,23 @@ const auth = createSlice({
     },
     clearStudent(state, { payload }) {
       state.student = undefined;
+      return state;
+    },
+    setPengajarID(state, { payload }) {
+      state.pengajarID = payload;
+      return state;
+    },
+    clearPengajarID(state, { payload }) {
+      state.pengajarID = undefined;
+      return state;
+    },
+
+    setisPengajar(state, { payload }) {
+      state.isPengajar = payload;
+      return state;
+    },
+    clearisPengajar(state, { payload }) {
+      state.isPengajar = undefined;
       return state;
     },
     setErrorMessage(state, { payload }) {
@@ -62,6 +81,10 @@ export const {
   setErrorMessage,
   setRefreshToken,
   setAllUsers,
+  setPengajarID,
+  clearPengajarID,
+  setisPengajar,
+  clearisPengajar,
   setSuccessMessage,
   clearMessages,
 } = auth.actions;

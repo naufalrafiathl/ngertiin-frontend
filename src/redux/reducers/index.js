@@ -10,7 +10,7 @@ import materiReducer from "../modules/materi"
 const authPersistConfig = {
     key: "auth",
     storage,
-    whitelist: ["token", "refreshToken", "student"],
+    whitelist: ["token", "refreshToken", "student", "pengajar_id", "isPengajar"],
 }
 
 const rootReducer = combineReducers({

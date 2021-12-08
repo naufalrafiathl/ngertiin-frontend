@@ -9,6 +9,10 @@ import {
   setStudent,
   setErrorMessage,
   clearMessages,
+  setPengajarID,
+  clearPengajarID,
+  setisPengajar,
+  clearisPengajar,
 } from "../auth";
 
 // utils
@@ -29,10 +33,13 @@ export const login = (username, password) => {
       .login(username, password)
       .then((res) => {
         const { data } = res;
-        const { access, refresh, student_detail } = data;
+        console.log(data)
+        const { access, refresh, student_detail, pengajar_id, isPengajar } = data;
         dispatch(setToken(access));
         setAuthToken();
         dispatch(setRefreshToken(refresh));
+        dispatch(setPengajarID(pengajar_id));
+        dispatch(setisPengajar(isPengajar));
         dispatch(setStudent(student_detail));
         dispatch(clearErrorMessage());
         window.location.assign("/");

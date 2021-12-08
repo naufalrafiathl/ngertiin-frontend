@@ -13,7 +13,6 @@ function Profile() {
                 </div>
                 <div className="header-right">
                 <Dashboard></Dashboard>
-                <Popup/>
                 </div>
             </div>
             
