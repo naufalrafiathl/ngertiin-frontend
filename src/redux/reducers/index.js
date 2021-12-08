@@ -18,6 +18,7 @@ const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
   materi: materiReducer,
   forum: forumReducer,
+  jurusan: materiReducer,
 });
 
 export default rootReducer;

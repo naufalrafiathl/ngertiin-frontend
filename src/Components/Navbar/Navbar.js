@@ -4,13 +4,13 @@ import { useState } from "react";
 import { AiOutlineMenuUnfold,AiOutlineMenu } from 'react-icons/ai'
 import { useDispatch } from 'react-redux';
 import { logout } from '../../redux/modules/auth/thunks'
+import { Link } from 'react-router-dom';
 
 function Navbar(props) {
 
     const dispatch = useDispatch()
     const [click,setClick] = useState(false)
     const btnClick = () => setClick(!click)
-    // const closeMobileMenu = () => setClick(false);
 
     return (
         <div className="navbars">
@@ -19,7 +19,7 @@ function Navbar(props) {
                 
                 {props.isLogin ? 
                 <div className="topnav" id="myTopnav">
-                    <a href="materi" >Materi</a>
+                    <Link to='/materi'>Materi</Link>
                     <a href="profile">Profile</a>
                     <a href="/" className="logout" onClick={() => dispatch(logout())}>Log-out</a>
                 </div>
@@ -41,11 +41,11 @@ function Navbar(props) {
                             Home
                     </li>
                 </a>
-                <a className="direct-detail" href="/Materi">
+                <Link className='direct-detail' to='/materi' >
                     <li className="nav-item">
                             Materi
                     </li>
-                </a>
+                </Link>
                 <a className="direct-detail" href="/profile">
                     <li className="nav-item">
                             Profile

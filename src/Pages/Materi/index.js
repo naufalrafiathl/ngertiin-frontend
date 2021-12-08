@@ -18,7 +18,7 @@ const Style = styled.div`
 const Materi = () => {
     const dispatch = useDispatch()
     const { student } = useSelector((state) => state.auth)
-    const { mapel } = useSelector((state) => state.materi)
+    const { mapel } = useSelector((state) => state.jurusan)
 
     useEffect(() => {
       student &&
@@ -27,7 +27,6 @@ const Materi = () => {
         })
       )
     }, [dispatch, student])
-
     return (
       <>
         <Routes>
