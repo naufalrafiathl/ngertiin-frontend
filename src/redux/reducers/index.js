@@ -15,7 +15,7 @@ const authPersistConfig = {
 
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
-  materi: materiReducer,
+  jurusan: materiReducer,
 });
 
 export default rootReducer;
