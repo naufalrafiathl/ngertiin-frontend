@@ -45,6 +45,22 @@ export const login = (username, password) => {
   };
 };
 
+export const register = (username, password, email, jurusan) => {
+  return (dispatch, _getState) => {
+    ngertiApi.auth
+      .register(username, password, email, jurusan)
+      .then((res) => {
+        // const { data } = res;
+        dispatch(login(username, password));
+      })
+      .catch((err) => {
+        if (err.response && err.response.status === 401) {
+          console.log("Invalid username/password");
+        }
+      });
+  };
+};
+
 export const refreshAccessToken = (func) => {
   return (dispatch, _getState) => {
     dispatch(clearMessages());

@@ -9,14 +9,15 @@ const auth = {
       username: username,
       password: password,
     }),
-  register: (email, username, password, jurusan, first_name, last_name, no_hp) => axios.post(`${API_BASE_URL}/auth/register/`, {
+  register: (username, password, email, jurusan) => 
+  axios.post(`${API_BASE_URL}/auth/register/`, {
     email: email,
     username: username,
     password: password,
     jurusan: jurusan,
-    first_name: first_name,
-    last_name: last_name,
-    no_hp: no_hp,
+    first_name: "dummy",
+    last_name: "dummy",
+    no_hp: "dummy",
   }),
   verifyToken: (token) =>
     axios.post(`${API_BASE_URL}/auth/token/verify/`, {

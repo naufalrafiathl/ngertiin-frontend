@@ -11,7 +11,6 @@ function Navbar(props) {
     const [click,setClick] = useState(false)
     const btnClick = () => setClick(!click)
     // const closeMobileMenu = () => setClick(false);
-    console.log(props.isLogin)
 
     return (
         <div className="navbars">
