@@ -11,7 +11,6 @@ function Navbar(props) {
     const [click,setClick] = useState(false)
     const btnClick = () => setClick(!click)
     // const closeMobileMenu = () => setClick(false);
-    console.log(props.isLogin)
 
     return (
         <div className="navbars">
@@ -55,6 +54,11 @@ function Navbar(props) {
                 <a href="/" className="direct-detail"  onClick={() => dispatch(logout())}>
                     <li className="nav-item">
                             Log-out
+                    </li>
+                </a>
+                <a className="direct-detail" href="/tryOut">
+                    <li className="nav-item">
+                            Try Out
                     </li>
                 </a>
             </ul>:""

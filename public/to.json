@@ -1,0 +1,47 @@
+[
+    {
+        "no": "1",
+        "pertanyaan": "Ada enam anak. 3 laki-laki dan 3 perempuan duduk berjajar. Peluang 2 perempuan duduk berdampingan adalah",
+        "A": "1/30",
+        "B": "1/15",
+        "C": "1/10",
+        "D": "1/3",
+        "jawaban_benar": "D"
+    },
+    {
+        "no": "2",
+        "pertanyaan": "Sel saraf yang berfungsi mengirimkan impuls dari sistem saraf pusat ke otot dan kelenjar adalah",
+        "A": "neuron sensori",
+        "B": "neuron aferen",
+        "C": "neuron eferen",
+        "D": "neuroglia",
+        "jawaban_benar": "C"
+    },
+    {
+        "no": "3",
+        "pertanyaan": "Aliran darah yang bergerak paling lambat terjadi pada",
+        "A": "arteriol",
+        "B": "aorta",
+        "C": "kapiler",
+        "D": "vena",
+        "jawaban_benar": "B"
+    },
+    {
+        "no": "4",
+        "pertanyaan": "Fertilisasi pada tumbuhan dari golongan Angiospermae terjadi di dalam",
+        "A": "stigma",
+        "B": "stilus",
+        "C": "ovarium",
+        "D": "ovulum",
+        "jawaban_benar": "C"
+    },
+    {
+        "no": "5",
+        "pertanyaan": "Bagian sel yang dimiliki oleh sel eukariot maupun sel prokariot adalah",
+        "A": "ribosom",
+        "B": "retikulum endoplasma",
+        "C": "badan golgi",
+        "D": "mitokondria",
+        "jawaban_benar": "A"
+    }
+]

@@ -22,7 +22,6 @@ export const related_mapel = ({jurusan}) => {
 
 export const related_modul = ({mapel}) => {
   return (dispatch) => {
-    console.log("related_modul", mapel)
     dispatch(
       refreshAccessToken(() => {
         ngertiApi.materi

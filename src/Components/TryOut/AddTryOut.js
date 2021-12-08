@@ -18,15 +18,16 @@ function AddTryOut(props) {
                         <input type="text" id="nama" className="form-text-field" required></input>
                     </div>
                     <div className="form-group">
-                        <label for="deskripsi" className="col-form-label">Deskripsi</label>
-                        <input type="text" id="deskripsi" className="form-text-field" required></input>
+                        <label for="isi" className="col-form-label">Upload CSV menggunakan format penamaan 3</label>
+                        <input type="file" accept=".csv" id="isi" className="form-csv-field" required></input>
                     </div>
                     <div className="form-group">
-                        <label for="isi" className="col-form-label">Upload CSV</label>
-                        <input type="file" id="isi" className="form-csv-field" required></input>
+                        <label for="waktu" className="col-form-label">Waktu Pengerjaan</label>
+                        <input type="integer"  id="waktu" className="form-text-field" required></input>
                     </div>
                     <a href="/listSoalTryOut"><button>Tambah Soal</button></a>
-                <a href="/tryOut"><button className="cancel-btn" type="button">Batal</button></a>
+                    &nbsp; &nbsp;
+                <a href="/tryOut"><button className="cancel-button" type="button">Batal</button></a>
                 </form>
             </div>
         </div>

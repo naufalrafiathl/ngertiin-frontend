@@ -5,6 +5,7 @@ import storage from "redux-persist/lib/storage";
 // reducers
 import authReducer from "../modules/auth"
 import materiReducer from "../modules/materi"
+import forumReducer from "../modules/forum"
 // import { reducer as toastrReducer } from "react-redux-toastr";
 
 const authPersistConfig = {
@@ -16,6 +17,7 @@ const authPersistConfig = {
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
   materi: materiReducer,
+  forum: forumReducer,
 });
 
 export default rootReducer;

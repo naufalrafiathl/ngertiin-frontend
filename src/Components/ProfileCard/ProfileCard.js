@@ -9,13 +9,11 @@ function ProfileCard() {
     const [user,setUser]=useState([]);
 
     useEffect(() => {
-        console.log("TES")
         fetch('User.json').then(response => {
             return response.json();
           }).then(data => {
             // Work with JSON data here
             setUser(data)
-            console.log(data);
           }).catch(err => {
             // Do something for an error here
           });
