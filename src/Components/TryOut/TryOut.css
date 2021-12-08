@@ -1,4 +1,3 @@
-
 .container-card {
     padding: 7rem;
     height: 500px;
@@ -247,4 +246,12 @@ textarea { resize: horizontal; max-width: 300px; min-width: 200px; }
     color: white;
     border-radius: 10px;
     align-items: center;
+}
+
+.button-update {
+    color: darkorange;
+}
+
+.container-forum .forum-card-container .forum-aside {
+    color: darkseagreen !important;
 }

@@ -56,6 +56,11 @@ function Navbar(props) {
                             Log-out
                     </li>
                 </a>
+                <a className="direct-detail" href="/tryOut">
+                    <li className="nav-item">
+                            Try Out
+                    </li>
+                </a>
             </ul>:""
                 }
                 

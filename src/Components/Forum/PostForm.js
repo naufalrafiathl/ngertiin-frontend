@@ -5,11 +5,7 @@ import { useState,useEffect } from 'react';
 function PostForm(props) {
     return (
         <div className="post-form-container">
-
-            {props.isUpdate ? 
-                <h1>Update Post</h1>: 
-                <h1>Create Post</h1>
-            }
+            {props.isUpdate ? <h1>Update Post</h1> : <h1>Create Post</h1>}
 
             <div className="form-section">
                 <form>
@@ -21,8 +17,8 @@ function PostForm(props) {
                         <label for="isi" className="col-form-label">Isi</label>
                         <textarea id="isi" className="form-text-field" required></textarea>
                     </div>
-                    <a href="/create-post"><button>Kirim</button></a>
-                <a href="/forum"><button className="cancel-btn" type="button">Batal</button></a>
+                    <a href="/create-post"><button>{props.isUpdate ? 'Update' : 'Kirim'}</button></a>
+                    <a href="/forum"><button className="cancel-btn" type="button">Batal</button></a>
                 </form>
             </div>
         </div>

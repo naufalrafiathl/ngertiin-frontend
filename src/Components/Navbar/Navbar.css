@@ -135,8 +135,8 @@ a {
       padding-right: 30px;
       overflow: hidden;
       color: black;
+      font-weight: 500;
       font-size: 24px;
-      font-family: Poppins;
     }
 
     .login-home {
