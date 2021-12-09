@@ -1,24 +1,12 @@
-import React from 'react'
-import { useEffect } from 'react';
-import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import { related_mapel } from '../../redux/modules/materi/thunks';
-import { Routes, Route, Outlet } from 'react-router';
 
-import Mapel from "./Mapel"
-import JurusanComp from "../../Components/Materi/JurusanComp"
 
-const Style = styled.div`
-    h2 {
 
-    }
-`
 
-const Materi = () => {
+const getSoal = () => {
     const dispatch = useDispatch()
     const { student } = useSelector((state) => state.auth)
-    const { mapel } = useSelector((state) => state.materi)
-    // console.log(mapel);
+    const { materi_kuis } = useSelector((state) => state.materi)
+
     useEffect(() => {
       student &&
       dispatch(related_mapel({
@@ -47,5 +35,4 @@ const Materi = () => {
     )
 }
 
-export default Materi
-
+export default getSoal

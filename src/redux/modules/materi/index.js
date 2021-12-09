@@ -4,7 +4,8 @@ const materi = createSlice({
     name: "materi",
     initialState: {
       mapel: undefined,
-      modul: undefined
+      modul: undefined,
+      materi_kuis: undefined,
     },
     reducers: {
       setMapel(state, { payload }) {
@@ -15,12 +16,17 @@ const materi = createSlice({
         state.modul = payload;
         return state;
       },
+      setMateriKuis(state, { payload }) {
+        state.materi_kuis = payload;
+        return state;
+      },
     },
   });
   
   export const {
       setMapel,
-      setModul
+      setModul,
+      setMateriKuis
   } = materi.actions;
   
   export default materi.reducer;

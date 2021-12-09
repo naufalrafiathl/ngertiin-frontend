@@ -8,7 +8,7 @@ const Style = styled.div`
 `
 
 const MateriComp = ({materi_data}) => {
-    console.log("hello")
+    console.log("matericomp")
     return (
       <>
         <Style>

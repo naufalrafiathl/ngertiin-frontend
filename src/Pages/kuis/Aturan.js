@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import '../css/Kuis.css'
+import { Link } from 'react-router-dom';
 
-function Aturan1() {
+function Aturan(mapel, modul, soal) {
+
     return (
         <div >
-            <Navbar isLogin={false} isRegistered={true}></Navbar>
             <div className="container-card">
                 <div className="aturan-card">
                     <div className="title-card">
@@ -17,10 +18,13 @@ function Aturan1() {
                         <p>Kami memiliki hak mutlak untuk mengenakan sanksi kepada peserta yang melanggar ketentuan di atas. Sanksi tersebut berupa penangguhan akun ngertiIn. Artinya Anda tidak dapat melakukan pengerjaan soal apapun di kelas ngertiIn selama masa penangguhan. Progress belajar peserta kelas ngertiIn pun, otomatis kami reset ke 0 (nol), tanpa terkecuali.</p>
                     </div>
                     <div className="content-card">
-                        Jumlah pertanyaan: 5
-                    </div>
-                    <div className="content-card">
-                        <a href="/kuis"><button>Mengerjakan Kuis</button></a>
+                            <Link to={{pathname:`/materi/${mapel.mapel}/${mapel.modul}/${mapel.soal}/kuis`}}>
+                                <div className="kembali">
+                                </div>
+                                <a><button>
+                                Mengerjakan Kuis
+                                </button></a>
+                            </Link>
                     </div>
                 </div>
             </div>
@@ -29,4 +33,4 @@ function Aturan1() {
 
 }
 
-export default Aturan1
+export default Aturan

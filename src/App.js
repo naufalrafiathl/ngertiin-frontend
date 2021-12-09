@@ -45,7 +45,6 @@ const App = () => {
               }/>
               {/* <Route path="/aturan" element={<Aturan/>}/>
               <Route path="/kuis" element={<Kuis/>}/>
-              <Route path="/sukses" element={<Sukses/>}/>
               <Route path="/profile" element={<Profile/>}/>
               <Route path="/forum" element={<Forum/>}/>
               <Route path="/create-post" element={<CreatePost/>}/>
@@ -94,6 +93,11 @@ App.LoggedIn = () => (
     <Routes>
       <Route path="/materi/*" element={<Materi/>}>
       </Route>
+      <Route path="/aturan/*" element={<Aturan/>}>
+      </Route>
+      <Route path="/sukses/*" element={<Sukses/>}>
+      </Route>
+      
     </Routes>
     <Outlet/>
   </>
