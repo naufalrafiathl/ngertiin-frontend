@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const materi = createSlice({
-    name: "materi",
+    name: "jurusan",
     initialState: {
       mapel: undefined,
       modul: undefined,
       materi_kuis: undefined,
+      materi: undefined
     },
     reducers: {
       setMapel(state, { payload }) {
@@ -18,6 +19,9 @@ const materi = createSlice({
       },
       setMateriKuis(state, { payload }) {
         state.materi_kuis = payload;
+      },
+      setMateri(state, { payload }) {
+        state.materi = payload;
         return state;
       },
     },
@@ -26,7 +30,8 @@ const materi = createSlice({
   export const {
       setMapel,
       setModul,
-      setMateriKuis
+      setMateriKuis,
+      setMateri
   } = materi.actions;
   
   export default materi.reducer;

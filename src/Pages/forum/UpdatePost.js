@@ -6,7 +6,6 @@ function UpdatePost() {
     return (
         <div>
             <div>
-            <Navbar isLogin={true} isRegistered={true}></Navbar>
             <div className="container-forum">
                 <PostForm isReply={false} isUpdate={true}></PostForm>
             </div>

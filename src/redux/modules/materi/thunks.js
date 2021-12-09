@@ -2,7 +2,7 @@ import ngertiApi from "../../../api/endpoints";
 import { refreshAccessToken } from "../auth/thunks";
 
 import {
-  setMapel, setModul, setMateriKuis
+  setMapel, setModul, setMateriKuis,setMateri
 } from "../materi"
 
 export const related_mapel = ({jurusan}) => {
@@ -43,6 +43,22 @@ export const related_soal = ({materi_kuis}) => {
           .related_soal(materi_kuis)
           .then((res) => {
             dispatch(setMateriKuis(res.data))
+          })
+          .catch(() => console.log("error"))
+      })
+    )
+  }
+}
+
+export const get_materi = ({materi_id}) => {
+  return (dispatch) => {
+    dispatch(
+      refreshAccessToken(() => {
+        ngertiApi.materi
+          .get_materi(materi_id)
+          .then((res) => {
+            console.log(res.data)
+            dispatch(setMateri(res.data))
           })
           .catch(() => console.log("error"))
       })

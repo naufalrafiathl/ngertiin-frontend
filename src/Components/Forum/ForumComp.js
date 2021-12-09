@@ -1,61 +1,37 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { related_post } from '../../redux/modules/forum/thunks'
+
 import './Forum.css'
 import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 // import SuccessNotification from './SuccessNotification';
 // import FailedNotification from './FailedNotification';
 
 function ForumComp(props) {
-    
-    const [posts,setPosts]=useState([]);
+    const dispatch = useDispatch()
+    const { posts } = useSelector((state) => state.forum)
 
     useEffect(() => {
-        console.log("TES")
-        fetch('Posts.json').then(response => {
-            return response.json();
-          }).then(data => {
-            // Work with JSON data here
-            setPosts(data)
-            console.log(data);
-          }).catch(err => {
-            // Do something for an error here
-          });
-      }, [] );
-
-    function ForumTitle(props) {
-        switch(props.value) {
-            case 'biologi':
-                return 'Forum Biologi';
-            case 'kimia':
-                return 'Forum Kimia';
-            case 'fisika':
-                return 'Forum Fisika';
-            case 'matematika':
-                return 'Forum Matematika';
-            case 'geografi':
-                return 'Forum Geografi';
-            case 'sejarah':
-                return 'Forum Sejarah';
-            case 'ekonomi':
-                return 'Forum Ekonomi';
-            case 'sosiologi':
-                return 'Forum Sosiologi';
-            default:
-                return 'Forum'
-        }
-    }
+        dispatch(related_post({
+            mapel: props.mapel_data.id
+        }))
+    }, [dispatch, posts])
 
     return (
         <div className="container-forum">
-            <h1><ForumTitle value={props.mapel} /></h1>
+            <h1>Forum {props.mapel_data.mapel}</h1>
 
             <div className="forum-card-container">
                 <div className="forum-aside">
-                    <a href="/create-post"><button>
-                        <span className="iconify-inline" data-icon="akar-icons:circle-plus"></span>  Buat Post
-                    </button></a>
+                    <Link to={{pathname:`/materi/${props.mapel_data.mapel.split(" ").join("-").toLowerCase()}/forum/create-post`}}>
+                        <a><button>
+                            <span className="iconify-inline" data-icon="akar-icons:circle-plus"></span>  Buat Post
+                        </button></a>
+                    </Link>
                 </div>
                 <div className="list-group forum-content forum-content-right">
-                {posts ? posts.map((post,index) => ( 
+                {posts ? posts.related_post.map((post, index) => ( 
                     <div className="post-card">
                         <div className="post-header">
                             <h2><a className="post-link" href="/details-post">{post.topik}</a></h2>
@@ -80,13 +56,13 @@ function ForumComp(props) {
                         </div>
                         <div className="post-footer">
                             <div>
-                                <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
+                                <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.pengirim}</p>
                             </div>
                             <div>
-                                <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
+                                <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {(new Date(post.waktu)).toDateString()}</p>
                             </div>
                             <div>
-                                <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post.length}</p>
+                                <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post_len}</p>
                             </div>
                         </div>
                     </div>

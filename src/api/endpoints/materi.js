@@ -10,6 +10,8 @@ const materi = {
     axios.get(`${API_BASE_URL}/belajar/mapel/${mapel}/`),
   related_soal: (materi_kuis) => 
     axios.get(`${API_BASE_URL}/belajar/materi/${materi_kuis}/`),
+  get_materi: (materi_id) => 
+    axios.get(`${API_BASE_URL}/belajar/materi/${materi_id}/`),
 }
 
 export default materi;
