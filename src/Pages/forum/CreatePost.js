@@ -1,14 +1,12 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
 import PostForm from '../../Components/Forum/PostForm'
 
-function CreatePost() {
+function CreatePost(props) {
     return (
         <div>
             <div>
-            <Navbar isLogin={true} isRegistered={true}></Navbar>
             <div className="container-forum">
-                <PostForm isReply={false} isUpdate={false}></PostForm>
+                <PostForm mapel_data={props.mapel_data} isReply={false} isUpdate={false}></PostForm>
             </div>
             </div>
         </div>

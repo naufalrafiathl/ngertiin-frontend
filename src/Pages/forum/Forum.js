@@ -1,15 +1,13 @@
+import CreatePost from './CreatePost';
 import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
 import ForumComp from '../../Components/Forum/ForumComp'
+import {Routes, Route} from 'react-router';
 
-function Forum() {
+function Forum(props) {
     return (
         <div>
-            <div>
-            <Navbar isLogin={true} isRegistered={true}></Navbar>
             <div className="container-forum">
-                <ForumComp mapel={''}/>
-            </div>
+                <ForumComp mapel_data={props.mapel_data}/>
             </div>
         </div>
     )

@@ -1,0 +1,94 @@
+.post-form-container {
+    text-align: center;
+    color: #396EB0;
+    padding: 4rem;
+}
+
+.form-section {
+    border-radius: 1rem;
+    padding: 3rem;
+    max-width: 700px;
+    border: 1pt solid #396EB0;
+    background-color:#396EB0 ;
+    margin: 3rem auto;
+}
+
+.form-section .form-group {
+    padding: 0.5rem;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.form-section .form-group label, .form-section .form-group .form-text-field{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-section .form-group label{
+    text-align: left;
+    color: white;
+}
+
+.form-section .form-group .form-text-field {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem;
+    width: 100%;
+    border:none;
+    border-radius: 10px;
+}
+
+.form-section .form-group textarea {
+    resize: vertical;
+    min-height: 6.5rem;
+}
+
+.form-section .form-group .form-csv-field {
+    color: white;
+
+}
+
+@media (min-width: 768px) {
+    .form-section .form-group {
+        display: flex;
+    }
+
+    .form-section .form-group label{
+        width: 30%;
+        text-align: left;
+    }
+    
+    .form-section .form-group .form-text-field {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+}
+
+.form-section button{
+    margin-top: 1.5rem;
+    padding: 0.7rem;
+    min-width: 150px;
+    font-size: 1rem;
+}
+
+.form-section p{
+    color: white;
+    font-size: 1.1rem;
+}
+
+.container-forum button:not(.cancel-btn){
+    color:white;
+    border: none;
+    border-radius: 10px;
+    background-color: #FC997C;
+}
+
+.container-forum button.cancel-button{
+    color:white;
+    border: none;
+    background-color: indianred;
+}
+
+.container-forum button:hover {
+    cursor: pointer;
+}

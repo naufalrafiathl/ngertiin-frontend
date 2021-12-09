@@ -1,0 +1,257 @@
+.container-card {
+    padding: 7rem;
+    height: 500px;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-quiz-card {
+    padding: 7rem;
+    height: 1000px;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.question-card{
+    margin: auto;
+    color: #666666;
+    background-color: #ffffff;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.soal-card {
+    margin: auto;
+    color: #666666;
+    background-color: #ffffff;
+    width: 90%;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.kuis-card {
+    background-color: #ffffff;
+    width: 68%;
+    height: 1000px;
+    overflow: auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title-card {
+    margin: auto;
+    color: #666666;
+    background-color: #ffffff;
+    width: 90%;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.content-card {
+    margin: auto;
+    color: #666666;
+    background-color: #ffffff;
+    width: 90%;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.aturan-card button, .button-card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #FC997C;
+    border: none;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
+}
+
+.create-soal {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+
+}
+
+.update button {
+    margin-top: 0.5rem;
+    margin-right: 10px;
+    padding: 0.5rem;
+    background-color: #396EB0;
+    border: none;
+    width: 100px;
+    color: white;
+    border-radius: 10px;
+}
+
+.cancel button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #DC3545;
+    border: none;
+    width: 100px;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-card {
+    margin: auto;
+    background-color: #ffffff;
+    width: 90%;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.kembali{
+    margin-right: auto;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.popup, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.popup-content {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #ffffff;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 350px;
+    min-width: 350px;
+    text-align: center;
+}
+.create-soal-baru .popup-content {
+    position: absolute;
+    margin-top: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+.createsoal-content {
+    font-size: small;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #ffffff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 50px;
+    min-width: 400px;
+}
+
+.form-buatsoal textarea{
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    height: 20px;
+    width: 50%;
+    border-radius: 8px;
+    border-color: #666666;
+}
+
+.pertanyaan textarea{
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    height:40px;
+    width: 85%;
+    border-radius: 8px;
+    border-color: #666666;
+    
+}
+.pertanyaan, .opsi, .jawaban_benar{
+    margin-top: 10px;
+}
+
+.form-buatsoal label{
+    font-weight: 400;
+}
+.form-buatsoal select{
+    padding-left: 0.5rem;
+    height: 20px;
+    border-radius: 8px;
+    border-color: #666666;
+    margin-right: 12.5rem;
+}
+
+.jawaban_benar button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #FC997C;
+    border: none;
+    width: 70px;
+    color: white;
+    border-radius: 10px;
+}
+
+
+textarea { resize: horizontal; max-width: 300px; min-width: 200px; }
+
+
+.popo button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #FC997C;
+    border: none;
+    width: 100px;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.button-update {
+    color: darkorange;
+}
+
+.container-forum .forum-card-container .forum-aside {
+    color: darkseagreen !important;
+}

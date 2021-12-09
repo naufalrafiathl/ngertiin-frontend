@@ -1,0 +1,16 @@
+
+[
+    { "mapel":"Biologi",
+      "nilai":"94"
+    },
+
+    { "mapel":"Matematika Saintek",
+        "nilai":"92"
+      },
+    { "mapel":"Kimia",
+      "nilai":"30"
+    },
+    { "mapel":"Fisika",
+        "nilai":"75"
+    }
+]

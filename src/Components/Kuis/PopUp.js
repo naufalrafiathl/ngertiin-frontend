@@ -28,7 +28,7 @@ const PopUp = () => {
                     <div className="popup-content">
                         <h2>Apakah anda Yakin?</h2>
                         <p>
-                        Dengan menekan tombol Ya, anda akan melanjutkan proses ini.
+                        Dengan menekan tombol Ya, anda akan menyelesaikan kuis ini.
                         </p>
                         <div className="button-card">
                             <div className="kembali"> 

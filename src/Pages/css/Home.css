@@ -8,7 +8,6 @@
 
 .options-home {
     width:100%;
-    padding: 7rem;
     padding-top: 0rem;
 }
 
@@ -34,3 +33,29 @@
   .container-home {
       padding-top: 5rem;
   }
+
+.profile-page {
+    padding: 5rem;
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-profile {
+
+    width: 100%;
+    height: 200px;
+    background-color: #396EB0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-left {
+    width: 50%;
+}
+
+.header-right {
+    width: 40%;
+}
+

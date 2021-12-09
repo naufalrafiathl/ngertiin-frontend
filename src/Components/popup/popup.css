@@ -1,0 +1,66 @@
+.popupCareer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerPopup {
+    position: relative;
+    border-radius: 1rem;
+    padding: 32px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #FFF;
+}
+
+.closeBTN {
+    margin-left: 1.5rem;
+    margin-top:4rem;
+    width: 100px;
+    padding:0.7rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #202020;
+    color: white;
+    font-size: 0.9rem;
+}
+.closeBTN:hover {
+    cursor: pointer;
+    background-color: #2e2e2e;
+}
+
+.closeBTN.apply {
+    margin: 0;
+    background-color:#FFC83B;
+    color: #202020;
+}
+
+.buttonCard {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.buttonCard button {
+    margin: auto;
+    margin-top: 7rem;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 45px;
+    background-color: #FC997C;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.buttonCard button:hover {
+    cursor: pointer;
+}

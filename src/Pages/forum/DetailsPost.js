@@ -6,7 +6,6 @@ function DetailsPost() {
     return (
         <div>
             <div>
-            <Navbar isLogin={true} isRegistered={true}></Navbar>
             <div className="container-forum">
                 <PostComp></PostComp>
             </div>
