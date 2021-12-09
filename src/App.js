@@ -43,9 +43,6 @@ const App = () => {
               <Route path="*" element={
                 loggedIn ? <App.LoggedIn/> : <App.LoggedOut />
               }/>
-              <Route path="/materi" element={<Materi/>}>
-                <Route path="*" element={<Materi/>}/>
-              </Route>
               <Route path="/aturan" element={<Aturan/>}/>
               <Route path="/kuis" element={<Kuis/>}/>
               <Route path="/sukses" element={<Sukses/>}/>
@@ -95,9 +92,9 @@ App.LoggedIn = () => (
   <>
     <Navbar isLogin={true} isRegistered={true}/>
     <Routes>
-      <Route path="/materi/*" element={<Materi/>}>
-      </Route>
+      <Route path="/materi/*" element={<Materi/>}></Route>
     </Routes>
+    <Outlet/>
   </>
 )
 

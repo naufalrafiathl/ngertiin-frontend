@@ -6,7 +6,6 @@ function CreatePost() {
     return (
         <div>
             <div>
-            <Navbar isLogin={true} isRegistered={true}></Navbar>
             <div className="container-forum">
                 <PostForm isReply={false} isUpdate={false}></PostForm>
             </div>
