@@ -6,7 +6,6 @@ function DeletePost() {
     return (
         <div>
             <div>
-            <Navbar isLogin={true} isRegistered={true}></Navbar>
             <div className="container-forum">
                 <ConfirmationDeletePost></ConfirmationDeletePost>
             </div>
