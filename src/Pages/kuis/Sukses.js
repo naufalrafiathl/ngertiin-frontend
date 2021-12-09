@@ -4,7 +4,6 @@ import { Icon } from '@iconify/react';
 function Sukses() {
     return (
         <div>
-            <Navbar isLogin={false} isRegistered={true}></Navbar>
             <div className="container-card">
                 <div className="aturan-card">
                     <div className="sukses-card">

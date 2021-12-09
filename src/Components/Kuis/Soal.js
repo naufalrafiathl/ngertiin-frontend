@@ -14,34 +14,34 @@ const Soal = ({kuis}) => {
                     <div> 
                         <input 
                             type="radio"
-                            value = {kuis.jawaban.A}
-                            name={kuis.jawaban.A}
+                            value = {kuis.A}
+                            name={kuis.A}
                         />
-                        {kuis.jawaban.A}
+                        {kuis.A}
                     </div>
                     <div> 
                         <input 
                             type="radio"
-                            value = {kuis.jawaban.B}
-                            name={kuis.jawaban.B}
+                            value = {kuis.B}
+                            name={kuis.B}
                         />
-                        {kuis.jawaban.B}
+                        {kuis.B}
                     </div>
                     <div> 
                         <input 
                             type="radio"
-                            value = {kuis.jawaban.C}
-                            name={kuis.jawaban.C}
+                            value = {kuis.C}
+                            name={kuis.C}
                         />
-                        {kuis.jawaban.C}
+                        {kuis.C}
                     </div>
                     <div> 
                         <input 
                             type="radio"
-                            value = {kuis.jawaban.D}
-                            name={kuis.jawaban.D}
+                            value = {kuis.D}
+                            name={kuis.D}
                         />
-                        {kuis.jawaban.D}
+                        {kuis.D}
                     </div>
                 </div>
             </div>  
