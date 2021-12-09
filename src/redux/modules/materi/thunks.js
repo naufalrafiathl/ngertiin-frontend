@@ -65,3 +65,39 @@ export const get_materi = ({materi_id}) => {
     )
   }
 }
+
+export const get_try_out = ({try_out_id}) => {
+  return (dispatch) => {
+    dispatch(
+      refreshAccessToken(() => {
+        ngertiApi.try_out
+          .get_try_out(materi_id)
+          .then((res) => {
+            console.log(res.data)
+            dispatch(setMateri(res.data))
+          })
+          .catch(() => console.log("error"))
+      })
+    )
+  }
+}
+
+export const create_try_out = ({
+  try_out_id,
+  materi,
+  jawaban
+}) => {
+  return (dispatch) => {
+    dispatch(
+      refreshAccessToken(() => {
+        ngertiApi.try_out
+          .get_try_out(materi_id)
+          .then((res) => {
+            console.log(res.data)
+            dispatch(setMateri(res.data))
+          })
+          .catch(() => console.log("error"))
+      })
+    )
+  }
+}
