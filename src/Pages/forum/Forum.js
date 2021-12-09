@@ -4,8 +4,6 @@ import ForumComp from '../../Components/Forum/ForumComp'
 import {Routes, Route} from 'react-router';
 
 function Forum(props) {
-    console.log(`/${props.mapel_data.mapel.split(" ").join("-").toLowerCase()}/forum/create-post/*`)
-
     return (
         <div>
             <div className="container-forum">
