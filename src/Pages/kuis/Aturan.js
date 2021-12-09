@@ -3,7 +3,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import '../css/Kuis.css'
 import { Link } from 'react-router-dom';
 
-function Aturan(mapel, modul, soal) {
+function Aturan(mapel) {
 
     return (
         <div >

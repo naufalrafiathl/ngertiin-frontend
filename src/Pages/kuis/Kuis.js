@@ -18,6 +18,8 @@ const Kuis = ({soal}) => {
             materi_kuis: soal
         }))
     }, [dispatch, soal])
+    
+    console.log(soal);
 
     return (
       <>    

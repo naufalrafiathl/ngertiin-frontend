@@ -24,6 +24,7 @@ import MengerjakanTryOut from './Pages/TryOut/MengerjakanTryOut';
 import DeletePaket from './Pages/TryOut/DeletePaket';
 import TryOut from './Pages/TryOut/TryOut';
 import Navbar from './Components/Navbar/Navbar'
+import ListSoal from './Components/Kuis/ListSoal'
 
 // redux
 import { useSelector } from 'react-redux';
@@ -97,7 +98,8 @@ App.LoggedIn = () => (
       </Route>
       <Route path="/sukses/*" element={<Sukses/>}>
       </Route>
-      
+      <Route path="/buat/" element={<ListSoal/>}>
+      </Route>
     </Routes>
     <Outlet/>
   </>

@@ -39,8 +39,10 @@ const Mapel = ({mapel_data}) => {
                                             <div className="kembali">
                                             <a><button>Mengerjakan Kuis</button></a>
                                             </div>
-
                                         </Link>
+                                    </div>
+                                    <div className="button-card">
+                                        <a href="/buat"><button style={{background: "gray"}}>Buat Soal</button></a>
                                     </div>
                                 </li>
                              ))}
