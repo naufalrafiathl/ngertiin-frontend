@@ -19,7 +19,7 @@ function TryOutC(props) {
 
     const [tryout,setTryOut]=useState([]);
     useEffect(() => {
-        fetch("http://localhost:8000/to/tryout/").then(response => {
+        fetch("https://ngerti-in-backend.herokuapp.com/to/tryout/").then(response => {
             return response.json();
           }).then(data => {
             setTryOut(data)
