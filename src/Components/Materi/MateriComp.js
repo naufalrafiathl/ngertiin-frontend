@@ -13,7 +13,8 @@ const MateriComp = ({materi_data}) => {
     const { materi } = useSelector((state) => state.jurusan)
     const dispatch = useDispatch()
     useEffect(() => {
-      dispatch(get_materi({materi_id: materi_data.id}))
+        materi_data && 
+        dispatch(get_materi({materi_id: materi_data.id}))
     }, [materi_data])
     return (
       <>

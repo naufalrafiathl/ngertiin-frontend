@@ -8,7 +8,7 @@ function ListSoalTryOut(props) {
     console.log(props.id)
     const [tryout,setTryOut]=useState([]);
     useEffect(() => {
-        fetch("http://localhost:8000/to/tryout/" + props.id).then(response => {
+        fetch("https://ngerti-in-backend.herokuapp.com/to/tryout/" + props.id).then(response => {
             return response.json();
           }).then(data => {
               console.log(data.soal)
