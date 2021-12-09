@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import './TryOut.css'
+import { Link } from 'react-router-dom';
 
 const PopUpTryOut = () => {
     const [popup, setPopup] = useState(false);
@@ -38,7 +39,7 @@ const PopUpTryOut = () => {
                                 Tidak
                                 </button>
                             </div>
-                            <a href="/sukses-submit-tryOut"><button>Ya</button></a>
+                            <Link to="/sukses-submit-tryOut"><button>Ya</button></Link>
                         </div>
                     </div>
                 </div>

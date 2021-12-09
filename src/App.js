@@ -56,12 +56,12 @@ const App = () => {
               <Route path="/details-post" element={<DetailsPost/>}/>
               <Route path="/delete-post" element={<DeletePost/>}/>
               <Route path="/tryOut" element={<TryOut/>}/>
+              <Route path="/aturan-tryOut/*" element={<AturanTryOut/>}/>
               <Route path="/create-tryOut" element={<CreateTryOut/>}/>
               <Route path="/update-tryOut" element={<UpdateTryOut/>}/>
               <Route path="/delete-tryOut" element={<DeletePaket/>}/>
-              <Route path="/aturan-tryOut" element={<AturanTryOut/>}/>
               <Route path="/sukses-submit-tryOut" element={<SuksesSubmitTryOut/>}/>
-              <Route path="/mengerjakan-tryOut" element={<MengerjakanTryOut/>}/>
+              <Route path="/mengerjakan-tryOut/*" element={<MengerjakanTryOut/>}/>
            </Routes>
       </Router>
     </div>

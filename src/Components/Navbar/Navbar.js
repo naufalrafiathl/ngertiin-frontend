@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AiOutlineMenuUnfold,AiOutlineMenu } from 'react-icons/ai'
 import { useDispatch } from 'react-redux';
 import { logout } from '../../redux/modules/auth/thunks'
+import { Link } from 'react-router-dom';
 
 function Navbar(props) {
 
@@ -21,6 +22,7 @@ function Navbar(props) {
                 <div className="topnav" id="myTopnav">
                     <a href="materi" >Materi</a>
                     <a href="profile">Profile</a>
+                    <Link to ="/tryOut" >Try Out</Link>
                     <a href="/" className="logout" onClick={() => dispatch(logout())}>Log-out</a>
                 </div>
                 : props.isRegistered? 
@@ -56,11 +58,11 @@ function Navbar(props) {
                             Log-out
                     </li>
                 </a>
-                <a className="direct-detail" href="/tryOut">
+                <Link className="direct-detail" to="/tryOut">
                     <li className="nav-item">
                             Try Out
                     </li>
-                </a>
+                </Link>
             </ul>:""
                 }
                 
