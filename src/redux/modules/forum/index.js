@@ -6,7 +6,7 @@ const forum = createSlice({
       posts: undefined
     },
     reducers: {
-      setMapel(state, { payload }) {
+      setPost(state, { payload }) {
         state.posts = payload;
         return state;
       },
@@ -14,7 +14,7 @@ const forum = createSlice({
   });
   
   export const {
-      setMapel
+      setPost
   } = forum.actions;
   
   export default forum.reducer;

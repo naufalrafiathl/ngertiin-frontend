@@ -24,6 +24,7 @@ import MengerjakanTryOut from './Pages/TryOut/MengerjakanTryOut';
 import DeletePaket from './Pages/TryOut/DeletePaket';
 import TryOut from './Pages/TryOut/TryOut';
 import Navbar from './Components/Navbar/Navbar'
+import ListSoal from './Components/Kuis/ListSoal'
 
 // redux
 import { useSelector } from 'react-redux';
@@ -46,6 +47,7 @@ const App = () => {
               <Route path="/aturan" element={<Aturan/>}/>
               <Route path="/kuis" element={<Kuis/>}/>
               <Route path="/sukses" element={<Sukses/>}/>
+              <Route path="/profile" element={<Profile/>}/>
               <Route path="/forum" element={<Forum/>}/>
               <Route path="/create-post" element={<CreatePost/>}/>
               <Route path="/update-post" element={<UpdatePost/>}/>
@@ -91,7 +93,14 @@ App.LoggedIn = () => (
   <>
     <Navbar isLogin={true} isRegistered={true}/>
     <Routes>
-      <Route path="/materi/*" element={<Materi/>}></Route>
+      <Route path="/materi/*" element={<Materi/>}>
+      </Route>
+      <Route path="/aturan/*" element={<Aturan/>}>
+      </Route>
+      <Route path="/sukses/*" element={<Sukses/>}>
+      </Route>
+      <Route path="/buat/" element={<ListSoal/>}>
+      </Route>
       <Route path="/profile" element={<Profile/>}/>
     </Routes>
     <Outlet/>

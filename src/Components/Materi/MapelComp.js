@@ -8,7 +8,6 @@ const Style = styled.div`
 `
 
 const MapelComp = ({materi_data}) => {
-    console.log("hello")
     return (
       <>
         <Style>

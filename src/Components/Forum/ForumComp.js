@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 function ForumComp(props) {
     const dispatch = useDispatch()
     const { posts } = useSelector((state) => state.forum)
+    console.log(posts)
 
     useEffect(() => {
         dispatch(related_post({
@@ -24,7 +25,7 @@ function ForumComp(props) {
 
             <div className="forum-card-container">
                 <div className="forum-aside">
-                    <Link to={{pathname:`/materi/${props.mapel_data.mapel.split(" ").join("-").toLowerCase()}/forum/create-post`}}>
+                    <Link to={{pathname:`/materi/${props.mapel_data.mapel.split(" ").join("-").toLowerCase()}/forum/create-post/${props.mapel_data.id}`}}>
                         <a><button>
                             <span className="iconify-inline" data-icon="akar-icons:circle-plus"></span>  Buat Post
                         </button></a>
