@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function PaketDeleteConfirmation(props) {
     return (
@@ -7,8 +8,8 @@ function PaketDeleteConfirmation(props) {
             <div className="form-section">
                 <p>Apakah anda yakin akan menghapus paket try out ini?</p>
                 <form>
-                    <a href="/delete-tryOut"><button>Hapus Paket</button></a>
-                    <a href="/tryOut"><button className="cancel-btn" type="button">Batal</button></a>
+                    <Link to="/delete-tryOut"><button>Hapus Paket</button></Link>
+                    <Link to="/tryOut"><button className="cancel-btn" type="button">Batal</button></Link>
                 </form>
             </div>
         </div>
