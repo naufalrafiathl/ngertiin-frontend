@@ -21,6 +21,7 @@ function Navbar(props) {
                 <div className="topnav" id="myTopnav">
                     <Link to='/materi'>Materi</Link>
                     <a href="profile">Profile</a>
+                    <Link to ="/tryOut" >Try Out</Link>
                     <a href="/" className="logout" onClick={() => dispatch(logout())}>Log-out</a>
                 </div>
                 : props.isRegistered? 
@@ -56,11 +57,11 @@ function Navbar(props) {
                             Log-out
                     </li>
                 </a>
-                <a className="direct-detail" href="/tryOut">
+                <Link className="direct-detail" to="/tryOut">
                     <li className="nav-item">
                             Try Out
                     </li>
-                </a>
+                </Link>
             </ul>:""
                 }
                 

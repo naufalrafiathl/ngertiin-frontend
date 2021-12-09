@@ -1,57 +1,62 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import './TryOut.css'
 import { useState,useEffect } from 'react';
-import NotifSuccess from './NotifSuccess';
-import NotifFailed from './NotifFailed';
+//import NotifSuccess from './NotifSuccess';
+//import NotifFailed from './NotifFailed';
+import { Link } from 'react-router-dom';
+import { get_tryout, get_all_tryout } from '../../redux/modules/tryout/thunks'
 
 function TryOutC(props) {
-    
-    const [tryout,setPaket]=useState([]);
+    // const dispatch = useDispatch()
+    // const { tryout } = useSelector((state) => state.tryout)
 
+    // useEffect(() => {
+    //     dispatch(get_all_tryout({
+    //         tryout: tryout
+    //     }))
+    // }, [dispatch, tryout])
+
+    const [tryout,setTryOut]=useState([]);
     useEffect(() => {
-        console.log("TES")
-        fetch('paket.json').then(response => {
+        fetch("http://localhost:8000/to/tryout/").then(response => {
             return response.json();
           }).then(data => {
-            // Work with JSON data here
-            setPaket(data)
-            console.log(data);
+            setTryOut(data)
           }).catch(err => {
-            // Do something for an error here
           });
-      }, [] );
-
+    }, [] );
 
     return (
         <div className="container-forum">
             <h1>List Paket Try Out</h1>
             <div className="forum-card-container">
                 <div className="forum-aside">
-                    <a href="/create-tryOut"><button>
+                    <Link to={{pathname:`/tryOut/create-tryOut`}}><button>
                         <span class="iconify-inline" data-icon="akar-icons:circle-plus"></span>  Buat Paket Try Out Baru
-                    </button></a>
+                    </button></Link>
                 </div>
                 <div className="list-group forum-content forum-content-right">
                 {tryout ? tryout.map((paket,index) => ( 
                     <div className="post-card">
                         <div className="post-header">
-                            <h2><a className="post-link" href="/aturan-tryOut">{paket.paket}</a></h2>
-                            <a href="/update-tryOut">
+                            <h2><Link className="post-link" to={"/aturan-tryOut/" + paket.id}>{paket.paket_try_out}</Link></h2>
+                            <Link to="/update-tryOut">
                                 <button>
                                 <span class="iconify-inline" data-icon="dashicons:edit"></span>
                                     Update Paket Try Out
                                 </button>
-                            </a>
-                            <a href="/delete-tryOut">
+                            </Link>
+                            <Link to="/delete-tryOut">
                                 <button>
                                 <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
                                     Hapus Paket Try Out
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                         <div className="post-footer">
                             <div>
-                                <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>  {paket.lama_pengerjaan}</p>
+                                <p><span class="iconify-inline" data-icon="ic:round-access-time"></span>{paket.durasi_pengerjaan}</p>
                             </div>
                         </div>
                     </div>
