@@ -1,11 +1,26 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
+import { useState,useEffect } from 'react';
 import '../css/TryOut.css'
+import { Link } from 'react-router-dom';
 
 function AturanTryOut() {
+    const queryString = window.location.pathname;
+
+    var metaid = queryString.replace("/aturan-tryOut/", "");
+    console.log(metaid)
+
+    const [tryout,setTryOut]=useState([]);
+    useEffect(() => {
+        fetch("http://localhost:8000/to/tryout/" + metaid).then(response => {
+            return response.json();
+          }).then(data => {
+            setTryOut(data)
+          }).catch(err => {
+          });
+    }, [] );
+
     return (
         <div >
-            <Navbar isLogin={false} isRegistered={true}></Navbar>
             <div className="container-card">
                 <div className="aturan-card">
                     <div className="title-card">
@@ -16,10 +31,7 @@ function AturanTryOut() {
                         <p>Kami memiliki hak mutlak untuk mengenakan sanksi kepada peserta yang melanggar ketentuan di atas. Sanksi tersebut berupa penangguhan akun ngertiIn. Artinya Anda tidak dapat melakukan pengerjaan soal apapun di kelas ngertiIn selama masa penangguhan. Nilai try out peserta kelas ngertiIn pun, otomatis kami reset ke 0 (nol), tanpa terkecuali.</p>
                     </div>
                     <div className="content-card">
-                        Jumlah pertanyaan: 5
-                    </div>
-                    <div className="content-card">
-                        <a href="/mengerjakan-tryOut"><button>Mengerjakan Try Out</button></a>
+                        <Link to={"/mengerjakan-tryOut/" + metaid}><button>Mengerjakan Try Out</button></Link>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './AddTryOut.css'
-import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function AddTryOut(props) {
     return (
@@ -27,7 +27,7 @@ function AddTryOut(props) {
                     </div>
                     <a href="/listSoalTryOut"><button>Tambah Soal</button></a>
                     &nbsp; &nbsp;
-                <a href="/tryOut"><button className="cancel-button" type="button">Batal</button></a>
+                <Link to="/tryOut"><button className="cancel-button" type="button">Batal</button></Link>
                 </form>
             </div>
         </div>

@@ -19,30 +19,11 @@ function ListSoal() {
     return (
         <div >
             
-            <div className="container-quiz-card">
-                View Untuk Student:
-                <div className="kuis-card">
-                    <div className="title-card">
-                        <h1>Kuis Metabolisme</h1>
-                    </div>
-                    {kuis.map((kuis, index) => (
-                        <Soal key = {index} kuis = {kuis}/>
-                    ))}
-                    <div className="button-card">
-                        <div className="kembali">
-                            <a href="/aturan"><button style={{background: "gray"}}>Kembali</button></a>
-                        </div>
-                        <PopUp/>
-                    </div>
-                </div>
-            </div>
-            
             {/* buat soal */}
             <div className="container-quiz-card">
-                View Untuk Pengajar:
                 <div className="kuis-card" style={{height: "1000px"}}>
                     <div className="title-card">
-                        <h1>Bank Soal Metabolisme</h1>
+                        <h1>Bank Soal</h1>
                     </div>
                     <CreateSoal/>
                     <div className="button-card">

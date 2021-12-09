@@ -1,6 +1,6 @@
 import React from 'react'
 import './Post.css'
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function PostComp(props) {
     
@@ -53,7 +53,7 @@ function PostComp(props) {
                             <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
                         </div>
                         <div>
-                            <p><span class="iconify-inline" data-icon="si-glyph:bubble-message-text"></span> {post.child_post.length} </p>
+                            <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post}</p>
                         </div>
                     </div>
                     <div className="list-group">

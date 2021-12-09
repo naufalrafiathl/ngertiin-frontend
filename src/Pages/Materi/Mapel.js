@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Routes, Route, Outlet } from 'react-router'
-
-import { get_materi, related_modul } from '../../redux/modules/materi/thunks'
-
+import { Link } from 'react-router-dom';
+import { related_modul } from '../../redux/modules/materi/thunks'
 import MapelComp from '../../Components/Materi/MapelComp'
 import MateriComp from '../../Components/Materi/MateriComp'
-import { Link } from 'react-router-dom'
+import Kuis from '../../Pages/kuis/Kuis'
+import Aturan from '../../Pages/kuis/Aturan'
+import { get_materi } from '../../redux/modules/materi/thunks'
+
 
 const Mapel = ({mapel_data}) => {
     const dispatch = useDispatch()
@@ -48,6 +50,39 @@ const Mapel = ({mapel_data}) => {
                 </>
                 )}
             </div>
+        <Routes>
+            <Route path="" element={<MapelComp/>}/>
+            {modul && modul.related_modul.map((modul_data, key) => (
+                    <Route 
+                      path={modul_data.modul.split(" ").join("-").toLowerCase()} 
+                      key={key}
+                    >
+                        {modul_data.related_materi.map((materi_data, key1) => (
+                            <>
+                                <Route 
+                                path={materi_data.judul.split(" ").join("-").toLowerCase()}
+                                element={<MateriComp/>} key={key1}
+                                />
+                                <Route 
+                                path={`${materi_data.judul.split(" ").join("-").toLowerCase()}/aturan/`}
+                                element={<Aturan 
+                                    mapel={modul.mapel_data.name.toLowerCase().split(" ").join("-").toLowerCase()} 
+                                    modul={modul_data.modul.toLowerCase().split(" ").join("-").toLowerCase()} 
+                                    soal={materi_data.judul.split(" ").join("-").toLowerCase()}/>} 
+                                    key={key1}
+                                />
+                                <Route 
+                                path={`${materi_data.judul.split(" ").join("-").toLowerCase()}/kuis/`}
+                                element={<Kuis soal={materi_data.id}/>} key={key1}
+                                />
+                            </>
+                        )
+                    )}
+                    </Route>
+                )
+            )}
+        </Routes>
+        <Outlet></Outlet>
             <div className="container-materi">
                 <Outlet></Outlet>
             </div>
