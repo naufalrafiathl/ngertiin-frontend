@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import './popup.css'
 
 function Popup() {
     const [popup, setPopup] = useState(false);
@@ -14,10 +15,10 @@ function Popup() {
     
     return (
         <div>
-            <div className="button-card">
+           <div className="buttonCard"> 
                 <button 
                 onClick={toggleModal}>
-                
+                Cek Raport
                 </button>
             </div>
             {popup && (

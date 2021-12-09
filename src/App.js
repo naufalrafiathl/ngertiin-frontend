@@ -93,6 +93,7 @@ App.LoggedIn = () => (
     <Navbar isLogin={true} isRegistered={true}/>
     <Routes>
       <Route path="/materi/*" element={<Materi/>}></Route>
+      <Route path="/profile" element={<Profile/>}/>
     </Routes>
     <Outlet/>
   </>
