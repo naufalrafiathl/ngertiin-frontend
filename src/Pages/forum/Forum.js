@@ -1,7 +1,5 @@
-import CreatePost from './CreatePost';
 import React from 'react'
 import ForumComp from '../../Components/Forum/ForumComp'
-import {Routes, Route} from 'react-router';
 
 function Forum(props) {
     return (

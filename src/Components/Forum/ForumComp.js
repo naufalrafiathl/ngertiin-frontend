@@ -35,22 +35,23 @@ function ForumComp(props) {
                 {posts ? posts.related_post.map((post, index) => ( 
                     <div className="post-card">
                         <div className="post-header">
-                            <h2><a className="post-link" href="/details-post">{post.topik}</a></h2>
+                            <Link to={{pathname:`/materi/${props.mapel_data.mapel.split(" ").join("-").toLowerCase()}/forum/post/${post.id}`}}>
+                            <h2><a className="post-link">{post.topik}</a></h2>
+                            </Link>
                             <a href="/create-post"><button>
                                 <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply
                             </button></a>
-                            <a href="/update-post">
+                            <Link to={{pathname:`post/update-post/${post.id}/${props.mapel_data.id}`}}>
                                 <button>
-                                <span class="iconify-inline" data-icon="dashicons:edit"></span>
-                                    Update
+                                    <span class="iconify-inline" data-icon="dashicons:edit"></span>  Update
                                 </button>
-                            </a>
-                            <a href="/delete-post">
+                            </Link>
+                            <Link to={{pathname:`post/delete-post/${post.id}`}}>
                                 <button>
                                 <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
                                     Hapus
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                         <div className="post-body two-line-par ">
                             <p>{post.isi}</p>                        

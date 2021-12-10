@@ -1,42 +1,28 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import './Post.css'
 import { useState, useEffect } from 'react';
+import { get_post } from '../../redux/modules/forum/thunks'
+import { Link } from 'react-router-dom';
 
 function PostComp(props) {
-    
-    const [post,setPost]=useState([]);
-    const [replies,setReplies]=useState([]);
-    
+    const dispatch = useDispatch()
+    const { post } = useSelector((state) => state.forum)
+    const queryString = window.location.pathname;
+    var querylist = queryString.split("/")
+    var id_post = querylist[5]
+    var mapel = querylist[2]
+
     useEffect(() => {
-        console.log("TES")
-        fetch('Post.json').then(response => {
-            return response.json();
-          }).then(data => {
-            // Work with JSON data here
-            setPost(data)
-            console.log(data);
-          }).catch(err => {
-            // Do something for an error here
-          });
-    }, [] );
-    
-    useEffect(() => {
-        console.log("TES")
-        fetch('Replies.json').then(response => {
-            return response.json();
-          }).then(data => {
-            // Work with JSON data here
-            setReplies(data)
-            console.log(data);
-          }).catch(err => {
-            // Do something for an error here
-          });
-    }, [] );
+        dispatch(get_post({
+            id: id_post
+        }))
+    }, [dispatch, post])
 
     return (
         <div className="container-forum">
             <h1>Forum</h1>
-            {post && post.child_post ? 
+            {post ? 
             <div className="forum-card-container">
                 <div className="post-card forum-content forum-content-left">
                     <div className="post-header">
@@ -47,16 +33,16 @@ function PostComp(props) {
                     </div>
                     <div className="post-footer">
                         <div>
-                            <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.username}</p>
+                            <p><span className="iconify-inline" data-icon="mdi:account"></span>  {post.pengirim}</p>
                         </div>
                         <div>
-                            <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {post.waktu}</p>
+                            <p><span className="iconify-inline" data-icon="ic:round-access-time"></span>  {(new Date(post.waktu)).toDateString()}</p>
                         </div>
                         <div>
-                            <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post}</p>
+                            <p><span className="iconify-inline" data-icon="si-glyph:bubble-message-text"></span>  {post.child_post_len}</p>
                         </div>
                     </div>
-                    <div className="list-group">
+                    {/* <div className="list-group">
                         {replies ? replies.map((reply,index) => ( 
                             <div className="post-card">
                                 <div className="post-header">
@@ -87,27 +73,27 @@ function PostComp(props) {
                                 </div>
                             </div>
                         )):"" }
-                    </div>
+                    </div> */}
                 </div>
                 <div className="forum-aside">
-                    <a href="/update-post">
+                    <Link to={{pathname:`/materi/${mapel}/forum/post/update-post/${post.id}`}}>
                         <button>
-                        <span class="iconify-inline" data-icon="dashicons:edit"></span>
-                            Update
+                            <span class="iconify-inline" data-icon="dashicons:edit"></span>   Update
                         </button>
-                    </a>
-                    <a href="/delete-post">
+                    </Link>
+                    <Link to={{pathname:`/materi/${mapel}/forum/post/delete-post/${post.id}`}}>
                         <button>
-                        <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>
-                            Hapus
+                            <span class="iconify-inline" data-icon="fluent:delete-24-filled"></span>  Hapus
                         </button>
-                    </a>
+                    </Link>
                     <a href="/create-post"><button>
                         <span class="iconify-inline" data-icon="mdi:message-reply-text"></span>  Reply
                     </button></a>
-                    <a href="/forum"><button>
-                        <span className="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
-                    </button></a>
+                    <Link to={{pathname:`/materi/${mapel}/forum/`}}>
+                        <button>
+                            <span className="iconify-inline" data-icon="bi:reply-fill"></span>  Kembali
+                        </button>
+                    </Link>
                 </div>
             </div>
             :""}

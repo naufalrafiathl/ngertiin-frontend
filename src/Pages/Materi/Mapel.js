@@ -23,7 +23,12 @@ const Mapel = ({mapel_data}) => {
             <div className="container-mapel">
                 {modul && (
                 <>
-                    <h2 className="materi-title">{modul.mapel_data.name}</h2>
+                    <h2 className="materi-title">{modul.mapel_data.name} 
+                    { modul.mapel_data.name ? 
+                    <Link to={`/materi/${modul.mapel_data.name.split(" ").join("-").toLowerCase()}/forum/`}>
+                    <a><button>Forum</button></a>
+                    </Link>:<></>
+                    }</h2>
                     <div className="modul-container">
                         <div className="modul"> 
                             <h3>Pendahuluan</h3>
@@ -54,12 +59,6 @@ const Mapel = ({mapel_data}) => {
                             </div>
                         ))}
                     </div>
-                    { modul.mapel_data.name ? 
-                    // <Link to={{pathname:`/materi/${modul.mapel_data.name.split(" ").join("-").toLowerCase()}/forum/`}}>
-                    <Link to={`/materi/${modul.mapel_data.name.split(" ").join("-").toLowerCase()}/forum/`}>
-                    <a><button>Forum</button></a>
-                    </Link>:<></>
-                    }
                 </>
                 )}
             </div>
