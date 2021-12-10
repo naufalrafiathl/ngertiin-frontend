@@ -12,7 +12,7 @@ import forumReducer from "../modules/forum"
 const authPersistConfig = {
     key: "auth",
     storage,
-    whitelist: ["token", "refreshToken", "student"],
+    whitelist: ["token", "refreshToken", "student", "pengajar_id", "isPengajar"],
 }
 
 const rootReducer = combineReducers({

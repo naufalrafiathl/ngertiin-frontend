@@ -1,5 +1,7 @@
 import React from 'react'
 import './Dashboard.css'
+import Popup from '../popup/Popup'
+
 function Dashboard() {
     return (
         <div className="container-user">
@@ -16,10 +18,7 @@ function Dashboard() {
                         <h3>Kerjakan Kuis!</h3>
                     </div>
 
-
-                    <div className="cek-raport">
-                        <h3>Cek Raportmu!</h3>
-                    </div>
+                    <Popup/>
             </div>
 
         </div>
