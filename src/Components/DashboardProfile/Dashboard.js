@@ -11,12 +11,16 @@ function Dashboard() {
 
                     <h1>Dashboard</h1>
                     <hr />
+                    <a href="/tryOut">
                     <div className="kerjakan">
-                        <h3>Kerjakan Tryout!</h3>
+                    <h3>Kerjakan Tryout!</h3>
                     </div>
+                    </a> 
+                    <a href="/tryOut">
                     <div className="kerjakan">
                         <h3>Kerjakan Kuis!</h3>
                     </div>
+                    </a>
 
                     <Popup/>
             </div>

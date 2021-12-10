@@ -29,6 +29,7 @@ import ListSoal from './Components/Kuis/ListSoal'
 // redux
 import { useSelector } from 'react-redux';
 import { isLoggedIn } from './redux/modules/auth/selector';
+import Raport from './Components/Raport/Raport';
 
 const App = () => {
   const loggedIn = useSelector(isLoggedIn)
@@ -102,6 +103,7 @@ App.LoggedIn = () => (
       <Route path="/buat/" element={<ListSoal/>}>
       </Route>
       <Route path="/profile" element={<Profile/>}/>
+      <Route path="/raport" element={<Raport/>}/>
     </Routes>
     <Outlet/>
   </>

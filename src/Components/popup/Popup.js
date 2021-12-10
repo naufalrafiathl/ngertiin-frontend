@@ -38,7 +38,7 @@ function Popup() {
                                 Batal
                                 </button>
                             </div>
-                            <a href="/sukses"><button>Lihat</button></a>
+                            <a href="/raport"><button>Lihat</button></a>
                         </div>
                     </div>
                 </div>

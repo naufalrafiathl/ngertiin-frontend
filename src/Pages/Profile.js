@@ -6,6 +6,7 @@ import ProfileCard from '../Components/ProfileCard/ProfileCard'
 function Profile() {
     return (
         <div >
+            <Navbar isLogin={true} isRegistered={true}/>
             <div className="header-profile">
                 <div className="profile-page">
                 <div className="header-left">
