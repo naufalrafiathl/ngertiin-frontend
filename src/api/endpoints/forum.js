@@ -25,7 +25,7 @@ const forum = {
             mapel: mapel
         }),
     delete_post: (id) =>
-        axios.put(`${API_BASE_URL}/forum/post/${id}/`),
+        axios.delete(`${API_BASE_URL}/forum/post/${id}/`),
 }
 
 export default forum;

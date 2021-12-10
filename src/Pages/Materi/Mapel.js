@@ -47,7 +47,7 @@ const Mapel = ({mapel_data}) => {
                     </div>
                     { modul.mapel_data.name ? 
                     // <Link to={{pathname:`/materi/${modul.mapel_data.name.split(" ").join("-").toLowerCase()}/forum/`}}>
-                    <Link to={`${modul.mapel_data.name.split(" ").join("-").toLowerCase()}/forum/`}>
+                    <Link to={`forum/`}>
                     <a><button>Forum</button></a>
                     </Link>:<></>
                     }
